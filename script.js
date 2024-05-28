@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         post.innerHTML = `
             <h2>${title}</h2>
             <p>${content}</p>
-            <button class="delete-button">Delete</button>
+            <button class="delete-button"><i class="fas fa-trash"></i> Delete</button>
         `;
 
         // Add delete functionality
