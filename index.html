@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
     <header>
@@ -20,6 +21,12 @@
             </nav>
         </div>
     </header>
+
+    <div>
+        <div class="nes-container is-dark with-title is-centered">
+            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          </div>
+    </div>
     
     <div class="container">
         <div class="main-content">
@@ -37,9 +44,9 @@
                     </ul>
                 </div>
             </aside>
-            
+
             <main>
-                <button id="new-post-button" class="btn"><i class="fas fa-plus"></i> New Post</button>
+                <button id="new-post-button" class="nes-btn is-primary"><i class="fas fa-plus"></i> New Post</button>
                 <div id="posts"></div>
             </main>
         </div>
@@ -63,7 +70,7 @@
             <form id="new-post-form">
                 <input type="text" id="post-title" placeholder="Title" required>
                 <textarea id="post-content" placeholder="Content" required></textarea>
-                <button type="submit" class="btn"><i class="fas fa-check"></i> Add Post</button>
+                <button type="submit" class="nes-btn is-primary"><i class="fas fa-check"></i> Add Post</button>
             </form>
         </div>
     </div>
