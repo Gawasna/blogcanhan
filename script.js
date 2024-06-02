@@ -1,50 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const newPostButton = document.getElementById('new-post-button');
-    const newPostModal = document.getElementById('new-post-modal');
-    const closeButton = document.querySelector('.close-button');
-    const newPostForm = document.getElementById('new-post-form');
-    const postsContainer = document.getElementById('posts');
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    // Open modal
-    newPostButton.addEventListener('click', () => {
-        newPostModal.style.display = 'block';
-    });
-
-    // Close modal
-    closeButton.addEventListener('click', () => {
-        newPostModal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside of it
-    window.addEventListener('click', (event) => {
-        if (event.target === newPostModal) {
-            newPostModal.style.display = 'none';
+    // Add scroll event to show or hide the button
+    window.addEventListener('scroll', function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
         }
     });
 
-    // Add new post
-    newPostForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const title = document.getElementById('post-title').value;
-        const content = document.getElementById('post-content').value;
+    // Add click event to scroll to the top
+    scrollToTopBtn.addEventListener('click', function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
 
-        const post = document.createElement('div');
-        post.className = 'post';
-        post.innerHTML = `
-            <h2>${title}</h2>
-            <p>${content}</p>
-            <button class="delete-button"><i class="fas fa-trash"></i> Delete</button>
-        `;
+    const searchField = document.getElementById('searchfield');
+    const searchForm = document.querySelector('.search-form');
+    const searchIcon = document.querySelector('.search-icon');
+    const clearIcon = document.querySelector('.clear-icon');
 
-        // Add delete functionality
-        post.querySelector('.delete-button').addEventListener('click', () => {
-            post.remove();
-        });
+    searchField.addEventListener('input', function() {
+        if (searchField.value) {
+            searchIcon.style.display = 'none';
+            clearIcon.style.display = 'block';
+        } else {
+            searchIcon.style.display = 'block';
+            clearIcon.style.display = 'none';
+        }
+    });
 
-        postsContainer.appendChild(post);
+    clearIcon.addEventListener('click', function() {
+        searchField.value = '';
+        searchIcon.style.display = 'block';
+        clearIcon.style.display = 'none';
+        searchField.focus();
+    });
 
-        // Reset form and close modal
-        newPostForm.reset();
-        newPostModal.style.display = 'none';
+    document.addEventListener('click', function(event) {
+        if (!searchForm.contains(event.target)) {
+            searchField.value = '';
+            searchIcon.style.display = 'block';
+            clearIcon.style.display = 'none';
+        }
+    });
+
+    var sf = document.getElementById("searchfield");
+
+    const lightFuncBtn = document.querySelector('.glb-btn-container');
+    const lightModeIcon = document.getElementById('light-mode');
+    const darkModeIcon = document.getElementById('dark-mode');
+
+    lightFuncBtn.addEventListener('click', function() {
+        if (lightModeIcon.style.display === 'none') {
+            lightModeIcon.style.display = 'block';
+            darkModeIcon.style.display = 'none';
+            header.style.backgroundImage = 'url("somt/aesthetic-stars.gif")';
+            sf.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+        } else {
+            lightModeIcon.style.display = 'none';
+            darkModeIcon.style.display = 'block';
+            header.style.backgroundImage = 'none';
+        }
     });
 });

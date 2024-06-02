@@ -3,78 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Blog</title>
+    <title>Gawasna's Blog</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="./soft1.jpg">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><i class="fas fa-blog"></i> My Personal Blog</h1>
-            <nav>
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-nav-btn">
+                    <label class="label-nav" for="offNav">
+                        <img id="navbtn" width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/menu--v1.png" alt="menu--v1"/>
+                    </label>
+                </div>
+                <div class="header-title">
+                    <h3 class="headerH">
+                        <span>Gawasna's Blog</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="h-right-container">
+                    <div class="search-ctn">
+                        <form class="search-form" action="/error/404NotFound.html">
+                            <input type="text" name="search" id="searchfield" placeholder="Search something..." autocomplete="off">
+                            <span class="search-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
+                            </span>
+                            <span class="clear-icon">
+                                <img width="20" height="20" src="https://img.icons8.com/ios/50/delete-sign--v1.png" alt="delete-sign--v1"/>
+                            </span>
+                        </form>
+                    </div>
+                    <ul class="glb-btn-container" style="list-style: none;">
+                        <li id="light-mode">
+                          <span>
+                            <img width="20" height="20" src="https://img.icons8.com/parakeet-line/20/sun.png" alt="sun"/>
+                          </span>
+                        </li>
+
+                        <li id="dark-mode">
+                          <span>
+                            <img width="20" height="20" src="https://img.icons8.com/ios/20/crescent-moon.png" alt="crescent-moon"/>
+                          </span>
+                        </li>
+
+                        <li id="about-btn">
+                          <span>
+                            <img width="20" height="20" src="https://img.icons8.com/ios/20/user--v1.png" alt="user--v1"/>
+                          </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div>
-        <div class="nes-container is-dark with-title is-centered">
-            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-          </div>
+    <div class="scrBtnctn">
+        <button id="scrollToTopBtn">
+            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/up.png" alt="up"/>
+        </button>
     </div>
     
-    <div class="container">
-        <div class="main-content">
-            <aside class="sidebar">
-                <div class="widget">
-                    <h2>About Me</h2>
-                    <p>Welcome to my blog! I share my thoughts on technology, programming, and life.</p>
-                </div>
-                <div class="widget">
-                    <h2>Categories</h2>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-laptop-code"></i> Technology</a></li>
-                        <li><a href="#"><i class="fas fa-code"></i> Programming</a></li>
-                        <li><a href="#"><i class="fas fa-heart"></i> Life</a></li>
-                    </ul>
-                </div>
-            </aside>
-
-            <main>
-                <button id="new-post-button" class="nes-btn is-primary"><i class="fas fa-plus"></i> New Post</button>
-                <div id="posts"></div>
-            </main>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Personal Blog</p>
-            <p>Follow me on 
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>, 
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>, and 
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            </p>
-        </div>
-    </footer>
-
-    <div id="new-post-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>New Post</h2>
-            <form id="new-post-form">
-                <input type="text" id="post-title" placeholder="Title" required>
-                <textarea id="post-content" placeholder="Content" required></textarea>
-                <button type="submit" class="nes-btn is-primary"><i class="fas fa-check"></i> Add Post</button>
-            </form>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
