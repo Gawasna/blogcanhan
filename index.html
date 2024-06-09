@@ -1,70 +1,1267 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gawasna's Blog</title>
-    <link rel="icon" type="image/png" sizes="48x48" href="./soft1.jpg">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="header-left">
-                <div class="header-nav-btn">
-                    <label class="label-nav" for="offNav">
-                        <img id="navbtn" width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/menu--v1.png" alt="menu--v1"/>
-                    </label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image"
+            content="https://img.icons8.com/material-outlined/24/up.png">
+        <title>Gawasna's Blog</title>
+        <link rel="icon" type="image/png" sizes="48x48" href="./soft1.jpg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <input class="navIn" id="offNav" type="checkbox">
+        <header class="header" id="header">
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="header-nav-btn">
+                        <label class="label-nav" for="offNav">
+                            <img id="navbtn" width="20" height="20"
+                                src="https://img.icons8.com/ios-glyphs/30/menu--v1.png"
+                                alt="menu--v1" />
+                        </label>
+                    </div>
+                    <div class="header-title">
+                        <p class="headerH">
+                            <span>Gawasna's Blog</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="header-title">
-                    <h3 class="headerH">
-                        <span>Gawasna's Blog</span>
-                    </h3>
+
+                <div class="header-right">
+                    <div class="h-right-container">
+                        <div class="search-ctn">
+                            <form class="search-form"
+                                action="/error/404NotFound.html">
+                                <input type="text" name="search"
+                                    id="searchfield"
+                                    placeholder="Search something..."
+                                    autocomplete="off">
+                                <span class="search-icon">
+                                    <img width="20" height="20"
+                                        src="https://img.icons8.com/ios/50/search--v1.png"
+                                        alt="search--v1" />
+                                </span>
+                                <span class="clear-icon">
+                                    <img width="20" height="20"
+                                        src="https://img.icons8.com/ios/50/delete-sign--v1.png"
+                                        alt="delete-sign--v1" />
+                                </span>
+                            </form>
+                        </div>
+                        <div class="glb-btn-container"
+                            style="list-style: none;">
+                            <button id="light-mode" style="display: none;">
+                                <span>
+                                    <img width="20" height="20"
+                                        src="https://img.icons8.com/parakeet-line/20/sun.png"
+                                        alt="sun" />
+                                </span>
+                            </button>
+
+                            <button id="dark-mode">
+                                <span>
+                                    <img width="20" height="20"
+                                        src="https://img.icons8.com/ios/20/crescent-moon.png"
+                                        alt="crescent-moon" />
+                                </span>
+                            </button>
+
+                            <button id="about-btn"
+                                onclick="window.location.href='http://github.com/Gawasna';">
+                                <span>
+                                    <img width="20" height="20"
+                                        src="https://img.icons8.com/ios/20/user--v1.png"
+                                        alt="user--v1" />
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="header-right">
-                <div class="h-right-container">
-                    <div class="search-ctn">
-                        <form class="search-form" action="/error/404NotFound.html">
-                            <input type="text" name="search" id="searchfield" placeholder="Search something..." autocomplete="off">
-                            <span class="search-icon">
-                                <img width="20" height="20" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
-                            </span>
-                            <span class="clear-icon">
-                                <img width="20" height="20" src="https://img.icons8.com/ios/50/delete-sign--v1.png" alt="delete-sign--v1"/>
-                            </span>
-                        </form>
+        </header>
+
+        <div class="main">
+            <div class="blogMn">
+                <div class="mnBr">
+                    <div class="mnBrs">
+                        <div class="mnH">
+                            <label aria-label="Close" class="c"
+                                data-text="Close" for="offNav"></label>
+                        </div>
+
+                        <div class="mnMob section" id="nav-widget-1">
+                            <div class="widget PageList" id="PageList002">
+                                <ul class="mMenu">
+                                    <li>
+                                        <span>Site map</span>
+                                    </li>
+                                    <li>
+                                        <span>Disclaimer</span>
+                                    </li>
+                                    <li>
+                                        <span>Privacy</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="widget LinkList" id="LinkList002">
+                                <div class="mNav">
+                                    <label class="tIc bIc" for="offNav">
+                                        <svg viewBox="0 0 512 512"><path
+                                                d="M417.4,224H288V94.6c0-16.9-14.3-30.6-32-30.6c-17.7,0-32,13.7-32,30.6V224H94.6C77.7,224,64,238.3,64,256 c0,17.7,13.7,32,30.6,32H224v129.4c0,16.9,14.3,30.6,32,30.6c17.7,0,32-13.7,32-30.6V288h129.4c16.9,0,30.6-14.3,30.6-32 C448,238.3,434.3,224,417.4,224z"></path></svg>
+                                    </label>
+                                </div>
+
+                                <ul class="mSoc">
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H17V18h4a1,1,0,0,0,0-2H17V14a2,2,0,0,1,2-2h2a1,1,0,0,0,0-2H19a4,4,0,0,0-4,4v2H12a1,1,0,0,0,0,2h3v9H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M22,3H10a7,7,0,0,0-7,7V22a7,7,0,0,0,7,7H22a7,7,0,0,0,7-7V10A7,7,0,0,0,22,3Zm5,19a5,5,0,0,1-5,5H10a5,5,0,0,1-5-5V10a5,5,0,0,1,5-5H22a5,5,0,0,1,5,5Z"></path><path
+                                                    d="M16,9.5A6.5,6.5,0,1,0,22.5,16,6.51,6.51,0,0,0,16,9.5Zm0,11A4.5,4.5,0,1,1,20.5,16,4.51,4.51,0,0,1,16,20.5Z"></path><circle
+                                                    cx="23" cy="9"
+                                                    r="1"></circle></svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M13.35,28A13.66,13.66,0,0,1,2.18,22.16a1,1,0,0,1,.69-1.56l2.84-.39A12,12,0,0,1,5.44,4.35a1,1,0,0,1,1.7.31,9.87,9.87,0,0,0,5.33,5.68,7.39,7.39,0,0,1,7.24-6.15,7.29,7.29,0,0,1,5.88,3H29a1,1,0,0,1,.9.56,1,1,0,0,1-.11,1.06L27,12.27c0,.14,0,.28-.05.41a12.46,12.46,0,0,1,.09,1.43A13.82,13.82,0,0,1,13.35,28ZM4.9,22.34A11.63,11.63,0,0,0,13.35,26,11.82,11.82,0,0,0,25.07,14.11,11.42,11.42,0,0,0,25,12.77a1.11,1.11,0,0,1,0-.26c0-.22.05-.43.06-.65a1,1,0,0,1,.22-.58l1.67-2.11H25.06a1,1,0,0,1-.85-.47,5.3,5.3,0,0,0-4.5-2.51,5.41,5.41,0,0,0-5.36,5.45,1.07,1.07,0,0,1-.4.83,1,1,0,0,1-.87.2A11.83,11.83,0,0,1,6,7,10,10,0,0,0,8.57,20.12a1,1,0,0,1,.37,1.05,1,1,0,0,1-.83.74Z"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z"></path><path
+                                                    d="M22,12a3,3,0,0,1-3-3,1,1,0,0,0-2,0V19a3,3,0,1,1-3-3,1,1,0,0,0,0-2,5,5,0,1,0,5,5V13a4.92,4.92,0,0,0,3,1,1,1,0,0,0,0-2Z"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z"></path><path
+                                                    d="M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z"></path></svg>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="a tIc bIc">
+                                            <svg viewBox="0 0 32 32"><path
+                                                    d="M24,28a1,1,0,0,1-.62-.22l-6.54-5.23a1.83,1.83,0,0,1-.13.16l-4,4a1,1,0,0,1-1.65-.36L8.2,18.72,2.55,15.89a1,1,0,0,1,.09-1.82l26-10a1,1,0,0,1,1,.17,1,1,0,0,1,.33,1l-5,22a1,1,0,0,1-.65.72A1,1,0,0,1,24,28Zm-8.43-9,7.81,6.25L27.61,6.61,5.47,15.12l4,2a1,1,0,0,1,.49.54l2.45,6.54,2.89-2.88-1.9-1.53A1,1,0,0,1,13,19a1,1,0,0,1,.35-.78l7-6a1,1,0,1,1,1.3,1.52Z"></path></svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mnMen section" id="nav-widget-2">
+                            <div class="widget HTML" id="HTML000">
+                                <ul class="mnMn" itemscope="itemscope"
+                                    itemtype="https://schema.org/SiteNavigationElement">
+                                    <li class="drp">
+                                        <input class="drpI hidden" id="drpDwn-1"
+                                            name="drpDwn" type="checkbox">
+                                        <label class="a" for="drpDwn-1">
+                                            <svg class="line"
+                                                viewBox="0 0 24 24"><g
+                                                    transform="translate(2.500000, 2.500000)"><line
+                                                        x1="6.6787" x2="12.4937"
+                                                        y1="12.0742685"
+                                                        y2="12.0742685"></line><path
+                                                        d="M-1.13686838e-13,5.29836453 C-1.13686838e-13,2.85645977 1.25,0.75931691 3.622,0.272650243 C5.993,-0.214968804 7.795,-0.0463973758 9.292,0.761221672 C10.79,1.56884072 10.361,2.76122167 11.9,3.63645977 C13.44,4.51265024 15.917,3.19645977 17.535,4.94217405 C19.229,6.7697931 19.2200005,9.57550739 19.2200005,11.3640788 C19.2200005,18.1602693 15.413,18.6993169 9.61,18.6993169 C3.807,18.6993169 -1.13686838e-13,18.2288407 -1.13686838e-13,11.3640788 L-1.13686838e-13,5.29836453 Z"></path></g></svg>
+                                            <span class="n">Posts</span>
+                                            <svg class="line d"
+                                                viewBox="0 0 24 24"><g
+                                                    transform="translate(5.000000, 8.500000)"><path
+                                                        d="M14,0 C14,0 9.856,7 7,7 C4.145,7 0,0 0,0"></path></g></svg>
+                                        </label>
+                                        <!--as File type-->
+                                        <ul>
+                                            <li itemprop="name">
+                                                <a
+                                                    href="https://j2team.dev/fshare-code"
+                                                    itemprop="url"
+                                                    rel="noopener"
+                                                    target="_blank">Fshare
+                                                    Code</a>
+                                            </li>
+                                            <li itemprop="name"></li>
+                                            <li itemprop="name"></li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="drp br">…</li>
+
+                                    <li>…</li>
+
+                                    <li class="br">…</li>
+
+                                    <li class="drp mr br">…</li>
+
+                                    <li>…</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="glb-btn-container" style="list-style: none;">
-                        <li id="light-mode">
-                          <span>
-                            <img width="20" height="20" src="https://img.icons8.com/parakeet-line/20/sun.png" alt="sun"/>
-                          </span>
-                        </li>
+                </div>
+                <label class="fCls" for="offNav"></label>
+            </div>
 
-                        <li id="dark-mode">
-                          <span>
-                            <img width="20" height="20" src="https://img.icons8.com/ios/20/crescent-moon.png" alt="crescent-moon"/>
-                          </span>
-                        </li>
+            <div class="blog-container">
+                <div class="blog-section">
+                    <div class="blog-main">
 
-                        <li id="about-btn">
-                          <span>
-                            <img width="20" height="20" src="https://img.icons8.com/ios/20/user--v1.png" alt="user--v1"/>
-                          </span>
-                        </li>
-                    </ul>
+                        <main class="blogtm mainbar">
+
+                            <div class="slideshow-container section">
+
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img class="slide-img" src="soft1.jpg" style="width:100%">
+                                  <div class="text">Caption Text</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img class="slide-img" src="somt/aesthetic-stars.gif" style="width:100%">
+                                  <div class="text">Caption Two</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img class="slide-img" src="soft1.jpg" style="width:100%">
+                                  <div class="text">Caption Three</div>
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                
+                                </div>
+                            <br>
+
+                            <div class="section" id="top-widget">
+                                <!-- for ads-->
+                                
+                                <!-- bài viết ghim-->
+                                <div class="wiget featurepost">
+                                    <h2 class="title">
+                                        Bài viết đã ghim
+                                    </h2>
+                                    <div class="itemFt" role="feed">
+                                        <article class="itm">
+                                            <div class="iThmb pThumb">
+                                                <a href="#" class="thmb">
+                                                    <img class="imgThm lazy loaded" src="img/ftimgtest.png" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="iCtnt">
+                                                <div class="pHdr pSml">
+                                                    <div class="pLbls" data-text="in">
+                                                        <a aria-label="Chrome" data-text="Chrome" href="https://www.junookyo.com/search/label/Chrome" rel="tag"></a>
+                                                        <a aria-label="Extension" data-text="Extension" href="https://www.junookyo.com/search/label/Extension" rel="tag"></a>
+                                                    </div>    
+                                                </div>
+
+                                                <h3 class="pTtl aTtl">
+                                                    <a href="https://www.junookyo.com/2022/09/thong-ke-tin-nhan-facebook-messenger.html">Thống kê tin nhắn Facebook xem ai nhắn tin với bạn nhiều nhất</a>
+                                                </h3>
+
+                                                <div class="pSnpt">
+                                                    " Facebook là một trong những mạng xã hội lớn nhất hiện nay. Các tương tác trên mạng xã hội này phần nào phản ánh mối quan hệ ngoài đời thực của chúng … "
+                                                </div>
+
+                                                <div class="pInf pSml">
+                                                    <time class="aTtmp pTtmp pbl" data-text="thg 9 2, 2022" datetime="2022-09-02T16:55:00+07:00" title="Published: tháng 9 2, 2022"></time>
+                                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2022/09/thong-ke-tin-nhan-facebook-messenger.html"></a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <!-- danh sách -->
+                            <div class="section" id="main-widget">
+                                <div class="widget Blog" data-version="2" id="Blog1">
+                                    <div class="blogTtl hm">
+                                    <h3 class="title">Bài đăng mới nhất</h3>
+                                    </div>
+                                    <div class="blogPts"> 
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2022/09/cai-dat-j2team-security.html">
+                                    <img alt="Cách cài đặt J2TEAM Security cho trình duyệt" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKqXhZtU0IPPmoLiCD2vltE8d5jqNXqVkiV6U7S0ryCXLS37rUix6MTquOQTakoQ89rRZyQbWreW3TIoWRTLuRTtQpmnUSwvRaYeEGYvTk9358d2b1opKiIIcB12jarGdjmNVRyFaGXvEYY8FqH71RKfGtmA3NmgBGqGYWGagsz7MQfSvHZr18CTY1iQ/w600-h300-p-k-no-nu/J2TEAM-Security-Chrome-extension.png" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKqXhZtU0IPPmoLiCD2vltE8d5jqNXqVkiV6U7S0ryCXLS37rUix6MTquOQTakoQ89rRZyQbWreW3TIoWRTLuRTtQpmnUSwvRaYeEGYvTk9358d2b1opKiIIcB12jarGdjmNVRyFaGXvEYY8FqH71RKfGtmA3NmgBGqGYWGagsz7MQfSvHZr18CTY1iQ/w600-h300-p-k-no-nu/J2TEAM-Security-Chrome-extension.png" lazied="">
+                                    <noscript><img alt='Cách cài đặt J2TEAM Security cho trình duyệt' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKqXhZtU0IPPmoLiCD2vltE8d5jqNXqVkiV6U7S0ryCXLS37rUix6MTquOQTakoQ89rRZyQbWreW3TIoWRTLuRTtQpmnUSwvRaYeEGYvTk9358d2b1opKiIIcB12jarGdjmNVRyFaGXvEYY8FqH71RKfGtmA3NmgBGqGYWGagsz7MQfSvHZr18CTY1iQ/w600-h300-p-k-no-nu/J2TEAM-Security-Chrome-extension.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Chrome" data-text="Chrome" href="https://www.junookyo.com/search/label/Chrome" rel="tag">
+                                    </a>
+                                    <a aria-label="Extension" data-text="Extension" href="https://www.junookyo.com/search/label/Extension" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Cách cài đặt J2TEAM Security cho trình duyệt" href="https://www.junookyo.com/2022/09/cai-dat-j2team-security.html" rel="bookmark">
+                                    Cách cài đặt J2TEAM Security cho trình duyệt
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    J2TEAM Security là gì? J2TEAM Security là một phần mở rộng (extension) dành cho trình duyệt Google Chrome và các trình duyệt dựa trên Chromium như Mi…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 9 2, 2022" datetime="2022-09-02T15:33:00+07:00" title="Published: tháng 9 2, 2022"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2022/09/cai-dat-j2team-security.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2022/09/cai-dat-j2team-security.html"
+                                                                },
+                                                                "headline": "Cách cài đặt J2TEAM Security cho trình duyệt",
+                                                                "description": "J2TEAM Security là gì? J2TEAM Security là một phần mở rộng (extension) dành cho trình duyệt Google Chrome và các trình duyệt dựa trên Chromium như Microsoft Edge, Brave, Vivaldi, Opera, Cốc Cốc,&#8230; Tác giả của tiện ích này là Mạnh Tuấn (thường được bi&#8230;",
+                                                                
+                                                                "datePublished": "2022-09-02T15:33:00+07:00",
+                                                                "dateModified": "2022-09-02T15:33:59+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKqXhZtU0IPPmoLiCD2vltE8d5jqNXqVkiV6U7S0ryCXLS37rUix6MTquOQTakoQ89rRZyQbWreW3TIoWRTLuRTtQpmnUSwvRaYeEGYvTk9358d2b1opKiIIcB12jarGdjmNVRyFaGXvEYY8FqH71RKfGtmA3NmgBGqGYWGagsz7MQfSvHZr18CTY1iQ/w1200-h630-p-k-no-nu/J2TEAM-Security-Chrome-extension.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2022/09/sua-loi-font-tieng-viet-tren-medium.html">
+                                    <img alt="Sửa lỗi font tiếng Việt trên Medium" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ2ff1X8W85MosQDIEiwk-PKXHwnzbn-4ghoZGLZxY-ad91DPsuvnl13SmOdeCP5F2tnTKE3Shh9m_bIJlz_WuMpKBpdaShehybIKZFeon9ZOvHetR2xK6JoHPqBOboUpNhDCR2RdBpYxmAHPjJIiD2rNw_TQl9xHX593VibRKL8CI0ue1UGKPcnaIPQ/w600-h300-p-k-no-nu/medium-font-vietnamese-1.png" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ2ff1X8W85MosQDIEiwk-PKXHwnzbn-4ghoZGLZxY-ad91DPsuvnl13SmOdeCP5F2tnTKE3Shh9m_bIJlz_WuMpKBpdaShehybIKZFeon9ZOvHetR2xK6JoHPqBOboUpNhDCR2RdBpYxmAHPjJIiD2rNw_TQl9xHX593VibRKL8CI0ue1UGKPcnaIPQ/w600-h300-p-k-no-nu/medium-font-vietnamese-1.png" lazied="">
+                                    <noscript><img alt='Sửa lỗi font tiếng Việt trên Medium' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ2ff1X8W85MosQDIEiwk-PKXHwnzbn-4ghoZGLZxY-ad91DPsuvnl13SmOdeCP5F2tnTKE3Shh9m_bIJlz_WuMpKBpdaShehybIKZFeon9ZOvHetR2xK6JoHPqBOboUpNhDCR2RdBpYxmAHPjJIiD2rNw_TQl9xHX593VibRKL8CI0ue1UGKPcnaIPQ/w600-h300-p-k-no-nu/medium-font-vietnamese-1.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Chrome" data-text="Chrome" href="https://www.junookyo.com/search/label/Chrome" rel="tag">
+                                    </a>
+                                    <a aria-label="Extension" data-text="Extension" href="https://www.junookyo.com/search/label/Extension" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Sửa lỗi font tiếng Việt trên Medium" href="https://www.junookyo.com/2022/09/sua-loi-font-tieng-viet-tren-medium.html" rel="bookmark">
+                                    Sửa lỗi font tiếng Việt trên Medium
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Medium  là một trong những nguồn thông tin lớn hiện nay, tại đây có rất nhiều các bài viết chất lượng. Tuy nhiên, khi đọc các bài viết tiếng Việt trê…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 9 2, 2022" datetime="2022-09-02T13:38:00+07:00" title="Published: tháng 9 2, 2022"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2022/09/sua-loi-font-tieng-viet-tren-medium.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2022/09/sua-loi-font-tieng-viet-tren-medium.html"
+                                                                },
+                                                                "headline": "Sửa lỗi font tiếng Việt trên Medium",
+                                                                "description": "Medium  là một trong những nguồn thông tin lớn hiện nay, tại đây có rất nhiều các bài viết chất lượng. Tuy nhiên, khi đọc các bài viết tiếng Việt trên Medium sẽ khá khó chịu khi mà tình trạng lỗi font tới giờ vẫn chưa được Medium khắc phục. Trong bà&#8230;",
+                                                                
+                                                                "datePublished": "2022-09-02T13:38:00+07:00",
+                                                                "dateModified": "2022-09-02T15:42:05+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ2ff1X8W85MosQDIEiwk-PKXHwnzbn-4ghoZGLZxY-ad91DPsuvnl13SmOdeCP5F2tnTKE3Shh9m_bIJlz_WuMpKBpdaShehybIKZFeon9ZOvHetR2xK6JoHPqBOboUpNhDCR2RdBpYxmAHPjJIiD2rNw_TQl9xHX593VibRKL8CI0ue1UGKPcnaIPQ/w1200-h630-p-k-no-nu/medium-font-vietnamese-1.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2022/10/death-click-chrome-extension.html">
+                                    <img alt="Thông báo về Death Click (Chrome Extension)" class="imgThm lazy loaded" data-src="https://lh3-testonly.googleusercontent.com/blogger_img_proxy/AEn0k_swXYAuPQRL3Of3ujGQ_SFUOs47cWySYfePlMZc47lr-DC3oXlJYvRtSWfBferrYQ5_TiQkjGKJmYzoCPBG-pBeitE=w600-h300-p-k-no-nu" src="https://lh3-testonly.googleusercontent.com/blogger_img_proxy/AEn0k_swXYAuPQRL3Of3ujGQ_SFUOs47cWySYfePlMZc47lr-DC3oXlJYvRtSWfBferrYQ5_TiQkjGKJmYzoCPBG-pBeitE=w600-h300-p-k-no-nu" lazied="">
+                                    <noscript><img alt='Thông báo về Death Click (Chrome Extension)' class='imgThm' src='https://lh3-testonly.googleusercontent.com/blogger_img_proxy/AEn0k_swXYAuPQRL3Of3ujGQ_SFUOs47cWySYfePlMZc47lr-DC3oXlJYvRtSWfBferrYQ5_TiQkjGKJmYzoCPBG-pBeitE=w600-h300-p-k-no-nu'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Chrome" data-text="Chrome" href="https://www.junookyo.com/search/label/Chrome" rel="tag">
+                                    </a>
+                                    <a aria-label="Extension" data-text="Extension" href="https://www.junookyo.com/search/label/Extension" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Thông báo về Death Click (Chrome Extension)" href="https://www.junookyo.com/2022/10/death-click-chrome-extension.html" rel="bookmark">
+                                    Thông báo về Death Click (Chrome Extension)
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Hình thành Thời gian đầu khi mình mới tạo nhóm J2TEAM Community , Facebook chưa có nhiều các tính năng giúp quản trị viên nhóm quản lý được dễ dàng. …
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 1 13, 2022" datetime="2022-01-14T01:12:00+07:00" title="Published: tháng 1 13, 2022"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2022/10/death-click-chrome-extension.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2022/10/death-click-chrome-extension.html"
+                                                                },
+                                                                "headline": "Thông báo về Death Click (Chrome Extension)",
+                                                                "description": "Hình thành Thời gian đầu khi mình mới tạo nhóm J2TEAM Community , Facebook chưa có nhiều các tính năng giúp quản trị viên nhóm quản lý được dễ dàng. Thao tác kick/ban một thành viên phải mất khá nhiều bước. Và thế là Death Click  &#8211; một extension giú&#8230;",
+                                                                
+                                                                "datePublished": "2022-01-14T01:12:00+07:00",
+                                                                "dateModified": "2024-01-09T00:51:24+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://lh3-testonly.googleusercontent.com/blogger_img_proxy/AEn0k_swXYAuPQRL3Of3ujGQ_SFUOs47cWySYfePlMZc47lr-DC3oXlJYvRtSWfBferrYQ5_TiQkjGKJmYzoCPBG-pBeitE\u003dw1200-h630-p-k-no-nu",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2021/03/lay-lai-fanpage-facebook.html">
+                                    <img alt="Tớ đã lấy lại fanpage sau 6 năm như thế nào?" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs85DkaySXmekdW9ay0JNJrLOHZpOCk32zULd1hS43M27CKXc6wm2vFTaaJd1WKa-L-Lz0yqqXyAqMOJE3CMpcKU2wHIYb9_ZKUiqskLjS_MfBtJq_DfHX7jBnxksBPMusBXdAceOu3_2M/w600-h300-p-k-no-nu/dung-ten-that-tren-facebook.png" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs85DkaySXmekdW9ay0JNJrLOHZpOCk32zULd1hS43M27CKXc6wm2vFTaaJd1WKa-L-Lz0yqqXyAqMOJE3CMpcKU2wHIYb9_ZKUiqskLjS_MfBtJq_DfHX7jBnxksBPMusBXdAceOu3_2M/w600-h300-p-k-no-nu/dung-ten-that-tren-facebook.png" lazied="">
+                                    <noscript><img alt='Tớ đã lấy lại fanpage sau 6 năm như thế nào?' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs85DkaySXmekdW9ay0JNJrLOHZpOCk32zULd1hS43M27CKXc6wm2vFTaaJd1WKa-L-Lz0yqqXyAqMOJE3CMpcKU2wHIYb9_ZKUiqskLjS_MfBtJq_DfHX7jBnxksBPMusBXdAceOu3_2M/w600-h300-p-k-no-nu/dung-ten-that-tren-facebook.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Facebook" data-text="Facebook" href="https://www.junookyo.com/search/label/Facebook" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Tớ đã lấy lại fanpage sau 6 năm như thế nào?" href="https://www.junookyo.com/2021/03/lay-lai-fanpage-facebook.html" rel="bookmark">
+                                    Tớ đã lấy lại fanpage sau 6 năm như thế nào?
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Mất fanpage chỉ vì bị ép dùng tên thật Đúng vậy, bạn không đọc nhầm đâu. Vào năm 2015, Facebook bắt đầu ra chính sách  yêu cầu mọi tài khoản trên Fac…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 3 21, 2021" datetime="2021-03-21T21:59:00+07:00" title="Published: tháng 3 21, 2021"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2021/03/lay-lai-fanpage-facebook.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2021/03/lay-lai-fanpage-facebook.html"
+                                                                },
+                                                                "headline": "Tớ đã lấy lại fanpage sau 6 năm như thế nào?",
+                                                                "description": "Mất fanpage chỉ vì bị ép dùng tên thật Đúng vậy, bạn không đọc nhầm đâu. Vào năm 2015, Facebook bắt đầu ra chính sách  yêu cầu mọi tài khoản trên Facebook sử dụng tên thật. Khi ấy, tài khoản Facebook của tớ vẫn đang sử dụng tên hiển thị là nickname &#8230;",
+                                                                
+                                                                "datePublished": "2021-03-21T21:59:00+07:00",
+                                                                "dateModified": "2021-03-21T21:59:56+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjs85DkaySXmekdW9ay0JNJrLOHZpOCk32zULd1hS43M27CKXc6wm2vFTaaJd1WKa-L-Lz0yqqXyAqMOJE3CMpcKU2wHIYb9_ZKUiqskLjS_MfBtJq_DfHX7jBnxksBPMusBXdAceOu3_2M/w1200-h630-p-k-no-nu/dung-ten-that-tren-facebook.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2020/01/smcc-social-listening.html">
+                                    <img alt="Xem ai đang nói xấu bạn bằng SMCC" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-HY5KPNJ4zMLaBhgxk5KDn16Xy2V4QOs_5PP93jT2oQzk4NJQ-kZIKRHwgR9KFMDCxTnaix_WNw3SeS34ySzQLBimZB13aP5KwUnnmtCc_yMPhUIkVFxOChmF_eZ8MxrJ6hvK3bl_Zvlo/w600-h300-p-k-no-nu/smcc-who-is-talking-about-you.jpg" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-HY5KPNJ4zMLaBhgxk5KDn16Xy2V4QOs_5PP93jT2oQzk4NJQ-kZIKRHwgR9KFMDCxTnaix_WNw3SeS34ySzQLBimZB13aP5KwUnnmtCc_yMPhUIkVFxOChmF_eZ8MxrJ6hvK3bl_Zvlo/w600-h300-p-k-no-nu/smcc-who-is-talking-about-you.jpg" lazied="">
+                                    <noscript><img alt='Xem ai đang nói xấu bạn bằng SMCC' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-HY5KPNJ4zMLaBhgxk5KDn16Xy2V4QOs_5PP93jT2oQzk4NJQ-kZIKRHwgR9KFMDCxTnaix_WNw3SeS34ySzQLBimZB13aP5KwUnnmtCc_yMPhUIkVFxOChmF_eZ8MxrJ6hvK3bl_Zvlo/w600-h300-p-k-no-nu/smcc-who-is-talking-about-you.jpg'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Tools" data-text="Tools" href="https://www.junookyo.com/search/label/Tools" rel="tag">
+                                    </a>
+                                    <a aria-label="TUTORIALS" data-text="TUTORIALS" href="https://www.junookyo.com/search/label/TUTORIALS" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Xem ai đang nói xấu bạn bằng SMCC" href="https://www.junookyo.com/2020/01/smcc-social-listening.html" rel="bookmark">
+                                    Xem ai đang nói xấu bạn bằng SMCC
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    SMCC là cái gì?  Mấy năm trước trong một lần đi tham dự sự kiện với mấy anh em cùng công ty, tớ vô tình nghe được bài nói của anh Lê Công Thành – …
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 1 23, 2020" datetime="2020-01-23T09:00:00+07:00" title="Published: tháng 1 23, 2020"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2020/01/smcc-social-listening.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2020/01/smcc-social-listening.html"
+                                                                },
+                                                                "headline": "Xem ai đang nói xấu bạn bằng SMCC",
+                                                                "description": "SMCC là cái gì?  Mấy năm trước trong một lần đi tham dự sự kiện với mấy anh em cùng công ty, tớ vô tình nghe được bài nói của anh Lê Công Thành &#8211; CEO của InfoRe về chủ đề xử lý dữ liệu lớn (Big Data). Trong bài nói anh ấy có nhắc tới một công cụ &#8230;",
+                                                                
+                                                                "datePublished": "2020-01-23T09:00:00+07:00",
+                                                                "dateModified": "2020-01-23T10:08:32+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-HY5KPNJ4zMLaBhgxk5KDn16Xy2V4QOs_5PP93jT2oQzk4NJQ-kZIKRHwgR9KFMDCxTnaix_WNw3SeS34ySzQLBimZB13aP5KwUnnmtCc_yMPhUIkVFxOChmF_eZ8MxrJ6hvK3bl_Zvlo/w1200-h630-p-k-no-nu/smcc-who-is-talking-about-you.jpg",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2020/01/how-a-scammer-stole-500-dollars-from-me.html">
+                                    <img alt="Một kẻ lừa đảo chôm của tui $500 và cuối cùng phải cầu xin tui đừng nói với phụ huynh của hắn" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm1P2O3EOYqpi73GYd3dy-LaWsznN7QsKdq74ESd3LWx4LUwGkh7OdEXFEwquVrIrxYWGLV5NGutDoIhab30B9e2YlAa4up4JEk1NL8OYr0y2PNlTZBndVxbC4fDOqHFmOOkg7mMS729Kf/w600-h300-p-k-no-nu/juno-okyo-blog.jpg" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm1P2O3EOYqpi73GYd3dy-LaWsznN7QsKdq74ESd3LWx4LUwGkh7OdEXFEwquVrIrxYWGLV5NGutDoIhab30B9e2YlAa4up4JEk1NL8OYr0y2PNlTZBndVxbC4fDOqHFmOOkg7mMS729Kf/w600-h300-p-k-no-nu/juno-okyo-blog.jpg" lazied="">
+                                    <noscript><img alt='Một kẻ lừa đảo chôm của tui $500 và cuối cùng phải cầu xin tui đừng nói với phụ huynh của hắn' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm1P2O3EOYqpi73GYd3dy-LaWsznN7QsKdq74ESd3LWx4LUwGkh7OdEXFEwquVrIrxYWGLV5NGutDoIhab30B9e2YlAa4up4JEk1NL8OYr0y2PNlTZBndVxbC4fDOqHFmOOkg7mMS729Kf/w600-h300-p-k-no-nu/juno-okyo-blog.jpg'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Security" data-text="Security" href="https://www.junookyo.com/search/label/Security" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Một kẻ lừa đảo chôm của tui $500 và cuối cùng phải cầu xin tui đừng nói với phụ huynh của hắn" href="https://www.junookyo.com/2020/01/how-a-scammer-stole-500-dollars-from-me.html" rel="bookmark">
+                                    Một kẻ lừa đảo chôm của tui $500 và cuối cùng phải cầu xin tui đừng nói với phụ huynh của hắn
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Vào năm 2012, tui giành chiến thắng trong một cuộc thi SysAdmin của Solar Winds ,&nbsp;phần thưởng là thẻ quà tặng trị giá $500 từ Apple Store.   Sau …
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 1 13, 2020" datetime="2020-01-13T20:47:00+07:00" title="Published: tháng 1 13, 2020"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2020/01/how-a-scammer-stole-500-dollars-from-me.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2020/01/how-a-scammer-stole-500-dollars-from-me.html"
+                                                                },
+                                                                "headline": "Một kẻ lừa đảo chôm của tui $500 và cuối cùng phải cầu xin tui đừng nói với phụ huynh của hắn",
+                                                                "description": "Vào năm 2012, tui giành chiến thắng trong một cuộc thi SysAdmin của Solar Winds ,&#160;phần thưởng là thẻ quà tặng trị giá $500 từ Apple Store.   Sau đó, tui đã nhiều lần cố gắng sử dụng hoặc bán chúng nhưng vì hiện tui không sống ở Mỹ nên không thể,&#8230;",
+                                                                
+                                                                "datePublished": "2020-01-13T20:47:00+07:00",
+                                                                "dateModified": "2020-01-13T20:47:34+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm1P2O3EOYqpi73GYd3dy-LaWsznN7QsKdq74ESd3LWx4LUwGkh7OdEXFEwquVrIrxYWGLV5NGutDoIhab30B9e2YlAa4up4JEk1NL8OYr0y2PNlTZBndVxbC4fDOqHFmOOkg7mMS729Kf/w1200-h630-p-k-no-nu/juno-okyo-blog.jpg",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2019/12/gmail-unsubscribe-from-all.html">
+                                    <img alt="Thủ thuật hủy theo dõi hàng loạt khỏi email quảng cáo" class="imgThm lazy" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGxWjp9Hfvm3-FXnz6M421dVWdMOelU316ReDMJzb-YnNn5mKLx57GsQ-yrXqF4KPFttJFiPCI1zfwML9uqceS2drtogL-PVGEHmSN1d5S2kwJnkiJz4yBNFCzXrG-Lw8sDb5paxvT56Ou/w600-h300-p-k-no-nu/gmail-unsubscribe.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" lazied="">
+                                    <noscript><img alt='Thủ thuật hủy theo dõi hàng loạt khỏi email quảng cáo' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGxWjp9Hfvm3-FXnz6M421dVWdMOelU316ReDMJzb-YnNn5mKLx57GsQ-yrXqF4KPFttJFiPCI1zfwML9uqceS2drtogL-PVGEHmSN1d5S2kwJnkiJz4yBNFCzXrG-Lw8sDb5paxvT56Ou/w600-h300-p-k-no-nu/gmail-unsubscribe.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Tips" data-text="Tips" href="https://www.junookyo.com/search/label/Tips" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Thủ thuật hủy theo dõi hàng loạt khỏi email quảng cáo" href="https://www.junookyo.com/2019/12/gmail-unsubscribe-from-all.html" rel="bookmark">
+                                    Thủ thuật hủy theo dõi hàng loạt khỏi email quảng cáo
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Nhiều khi lướt web chúng ta cũng hay đăng ký mấy cái Email newsletter (nhận thông báo bài viết qua email). Nếu gặp mấy trang hay thì không nói, n…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 12 23, 2019" datetime="2019-12-23T17:17:00+07:00" title="Published: tháng 12 23, 2019"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2019/12/gmail-unsubscribe-from-all.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2019/12/gmail-unsubscribe-from-all.html"
+                                                                },
+                                                                "headline": "Thủ thuật hủy theo dõi hàng loạt khỏi email quảng cáo",
+                                                                "description": "Nhiều khi lướt web chúng ta cũng hay đăng ký mấy cái Email newsletter (nhận thông báo bài viết qua email). Nếu gặp mấy trang hay thì không nói, nhưng đôi lúc chúng ta vô tình đăng ký vào mấy trang spam, quảng cáo thì cũng mệt phết.",
+                                                                
+                                                                "datePublished": "2019-12-23T17:17:00+07:00",
+                                                                "dateModified": "2019-12-23T17:21:32+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGxWjp9Hfvm3-FXnz6M421dVWdMOelU316ReDMJzb-YnNn5mKLx57GsQ-yrXqF4KPFttJFiPCI1zfwML9uqceS2drtogL-PVGEHmSN1d5S2kwJnkiJz4yBNFCzXrG-Lw8sDb5paxvT56Ou/w1200-h630-p-k-no-nu/gmail-unsubscribe.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2019/12/lam-trang-chuyen-huong-khoi-blog.html">
+                                    <img alt="Cách làm trang chuyển hướng khỏi Blog cho Blogspot (Blogger)" class="imgThm lazy" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgotSSSTEZJ7xMMLm-GPjkDUMyxnc4LJXRCTT4m8EV-z_n36t7Ozvk0np3hIdjGVUVengndnWiRhMU-fEI4aze4BvhBwZW6mMjunY9NfW1r_lRXZ4iTyvu7_5XJztBI_i5vN3xG38ME6wY9/w600-h300-p-k-no-nu/create-redirector-for-blogger.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" lazied="">
+                                    <noscript><img alt='Cách làm trang chuyển hướng khỏi Blog cho Blogspot (Blogger)' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgotSSSTEZJ7xMMLm-GPjkDUMyxnc4LJXRCTT4m8EV-z_n36t7Ozvk0np3hIdjGVUVengndnWiRhMU-fEI4aze4BvhBwZW6mMjunY9NfW1r_lRXZ4iTyvu7_5XJztBI_i5vN3xG38ME6wY9/w600-h300-p-k-no-nu/create-redirector-for-blogger.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Blogger" data-text="Blogger" href="https://www.junookyo.com/search/label/Blogger" rel="tag">
+                                    </a>
+                                    <a aria-label="TUTORIALS" data-text="TUTORIALS" href="https://www.junookyo.com/search/label/TUTORIALS" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Cách làm trang chuyển hướng khỏi Blog cho Blogspot (Blogger)" href="https://www.junookyo.com/2019/12/lam-trang-chuyen-huong-khoi-blog.html" rel="bookmark">
+                                    Cách làm trang chuyển hướng khỏi Blog cho Blogspot (Blogger)
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Nhân tiện có bạn hỏi cách làm trang chuyển tiếp khi click vào link cho Blogspot nên tớ viết bài hướng dẫn luôn vì tớ cũng mới làm trang như vậy c…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 12 23, 2019" datetime="2019-12-23T16:01:00+07:00" title="Published: tháng 12 23, 2019"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2019/12/lam-trang-chuyen-huong-khoi-blog.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2019/12/lam-trang-chuyen-huong-khoi-blog.html"
+                                                                },
+                                                                "headline": "Cách làm trang chuyển hướng khỏi Blog cho Blogspot (Blogger)",
+                                                                "description": "Nhân tiện có bạn hỏi cách làm trang chuyển tiếp khi click vào link cho Blogspot nên tớ viết bài hướng dẫn luôn vì tớ cũng mới làm trang như vậy cho blog này gần đây. Các bạn có thể nhấn thử vào liên kết này để xem demo: https://bit.ly/j2team-sec&#8230;",
+                                                                
+                                                                "datePublished": "2019-12-23T16:01:00+07:00",
+                                                                "dateModified": "2019-12-23T16:01:08+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgotSSSTEZJ7xMMLm-GPjkDUMyxnc4LJXRCTT4m8EV-z_n36t7Ozvk0np3hIdjGVUVengndnWiRhMU-fEI4aze4BvhBwZW6mMjunY9NfW1r_lRXZ4iTyvu7_5XJztBI_i5vN3xG38ME6wY9/w1200-h630-p-k-no-nu/create-redirector-for-blogger.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2019/11/them-nut-doc-bai-viet-vao-trang-web.html">
+                                    <img alt="Hướng dẫn thêm nút đọc bài viết vào trang web của bạn" class="imgThm lazy" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPU-X8esnpbCt4oXPPn6dO7z3dFIrgPPfBYEbZ9WBPIT9GixGyIAhBaq8au3YGt3ROw3l9o_TPBYVQyioPNvLWbbdGuMF-_zLHFZAn6aqkqWoK7UF1PjmlhQ6sijCnEC2uGY_fLFj9Hx33/w600-h300-p-k-no-nu/website-voice-button.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" lazied="">
+                                    <noscript><img alt='Hướng dẫn thêm nút đọc bài viết vào trang web của bạn' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPU-X8esnpbCt4oXPPn6dO7z3dFIrgPPfBYEbZ9WBPIT9GixGyIAhBaq8au3YGt3ROw3l9o_TPBYVQyioPNvLWbbdGuMF-_zLHFZAn6aqkqWoK7UF1PjmlhQ6sijCnEC2uGY_fLFj9Hx33/w600-h300-p-k-no-nu/website-voice-button.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="TUTORIALS" data-text="TUTORIALS" href="https://www.junookyo.com/search/label/TUTORIALS" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Hướng dẫn thêm nút đọc bài viết vào trang web của bạn" href="https://www.junookyo.com/2019/11/them-nut-doc-bai-viet-vao-trang-web.html" rel="bookmark">
+                                    Hướng dẫn thêm nút đọc bài viết vào trang web của bạn
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Khoảng mấy tháng nay nếu bạn đọc các bài viết trên blog của JUNO_OKYO  hẳn sẽ nhận ra là có thêm một nút Đọc bài viết  ở đầu mỗi bài. Chỉ với một…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 11 22, 2019" datetime="2019-11-22T16:23:00+07:00" title="Published: tháng 11 22, 2019"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2019/11/them-nut-doc-bai-viet-vao-trang-web.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2019/11/them-nut-doc-bai-viet-vao-trang-web.html"
+                                                                },
+                                                                "headline": "Hướng dẫn thêm nút đọc bài viết vào trang web của bạn",
+                                                                "description": "Khoảng mấy tháng nay nếu bạn đọc các bài viết trên blog của JUNO_OKYO  hẳn sẽ nhận ra là có thêm một nút Đọc bài viết  ở đầu mỗi bài. Chỉ với một cái nút mới này thôi mà các bài viết sẽ trở thành audio blog, giúp độc giả có thể vừa nghe bài viết&#8230;",
+                                                                
+                                                                "datePublished": "2019-11-22T16:23:00+07:00",
+                                                                "dateModified": "2019-11-22T16:23:44+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPU-X8esnpbCt4oXPPn6dO7z3dFIrgPPfBYEbZ9WBPIT9GixGyIAhBaq8au3YGt3ROw3l9o_TPBYVQyioPNvLWbbdGuMF-_zLHFZAn6aqkqWoK7UF1PjmlhQ6sijCnEC2uGY_fLFj9Hx33/w1200-h630-p-k-no-nu/website-voice-button.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2019/10/pornhub-interview.html">
+                                    <img alt="Phỏng vấn với một nhà phát triển web tại Pornhub" class="imgThm lazy" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzdvVNmr6WJVReQSGnV2F9xbJJaNrD_cuGNQsBLrD-qio37EbQ7uGJ4lR3FnN7MuTPoxkOIGREBZcp3IN6xUKjwBFkJ9Scpq7hNvmz6MqoqQHETHvyate8X1TStPpppEfzMTm4rJnwdUXQ/w600-h300-p-k-no-nu/web-developer-hiring.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" lazied="">
+                                    <noscript><img alt='Phỏng vấn với một nhà phát triển web tại Pornhub' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzdvVNmr6WJVReQSGnV2F9xbJJaNrD_cuGNQsBLrD-qio37EbQ7uGJ4lR3FnN7MuTPoxkOIGREBZcp3IN6xUKjwBFkJ9Scpq7hNvmz6MqoqQHETHvyate8X1TStPpppEfzMTm4rJnwdUXQ/w600-h300-p-k-no-nu/web-developer-hiring.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="Web Developer" data-text="Web Developer" href="https://www.junookyo.com/search/label/Web%20Developer" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="Phỏng vấn với một nhà phát triển web tại Pornhub" href="https://www.junookyo.com/2019/10/pornhub-interview.html" rel="bookmark">
+                                    Phỏng vấn với một nhà phát triển web tại Pornhub
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Dù lập trường của bạn về nội dung khiêu d.â.m là gì đi nữa thì tôi tin là chúng ta không thể phủ nhận tác động to lớn của ngành công nghiệp này đ…
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 10 22, 2019" datetime="2019-10-22T22:34:00+07:00" title="Published: tháng 10 22, 2019"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2019/10/pornhub-interview.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2019/10/pornhub-interview.html"
+                                                                },
+                                                                "headline": "Phỏng vấn với một nhà phát triển web tại Pornhub",
+                                                                "description": "Dù lập trường của bạn về nội dung khiêu d.â.m là gì đi nữa thì tôi tin là chúng ta không thể phủ nhận tác động to lớn của ngành công nghiệp này đã thúc đẩy nền tảng web tiến về phía trước. Từ việc đẩy các giới hạn video của trình duyệt đến việc &#8230;",
+                                                                
+                                                                "datePublished": "2019-10-22T22:34:00+07:00",
+                                                                "dateModified": "2019-10-22T22:55:17+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzdvVNmr6WJVReQSGnV2F9xbJJaNrD_cuGNQsBLrD-qio37EbQ7uGJ4lR3FnN7MuTPoxkOIGREBZcp3IN6xUKjwBFkJ9Scpq7hNvmz6MqoqQHETHvyate8X1TStPpppEfzMTm4rJnwdUXQ/w1200-h630-p-k-no-nu/web-developer-hiring.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    <article class="ntry">
+                                    <div class="pThmb">
+                                    <a class="thmb" href="https://www.junookyo.com/2019/10/html-can-do-that.html">
+                                    <img alt="10 điều bạn có thể làm được mà chỉ cần HTML" class="imgThm lazy" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixYbWiU5Pyvk-FM28J3_HSCmFxDGlivQP0cnRn6nlKnMAIQJtIkcovnO3DZEguqSpojj51hA9ncHAgR22oAXdatASv8aIJ3MirXOu4l-dJPrpgLtoEl4hS0WvfItLQcFebmI0d4FEzP5og/w600-h300-p-k-no-nu/html-can-do-that.png" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" lazied="">
+                                    <noscript><img alt='10 điều bạn có thể làm được mà chỉ cần HTML' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixYbWiU5Pyvk-FM28J3_HSCmFxDGlivQP0cnRn6nlKnMAIQJtIkcovnO3DZEguqSpojj51hA9ncHAgR22oAXdatASv8aIJ3MirXOu4l-dJPrpgLtoEl4hS0WvfItLQcFebmI0d4FEzP5og/w600-h300-p-k-no-nu/html-can-do-that.png'/></noscript>
+                                    </a>
+                                    </div>
+                                    <div class="pCntn">
+                                    <div class="pHdr pSml">
+                                    <div class="pLbls" data-text="in">
+                                    <a aria-label="HTML" data-text="HTML" href="https://www.junookyo.com/search/label/HTML" rel="tag">
+                                    </a>
+                                    <a aria-label="TUTORIALS" data-text="TUTORIALS" href="https://www.junookyo.com/search/label/TUTORIALS" rel="tag">
+                                    </a>
+                                    </div>
+                                    </div>
+                                    <h2 class="pTtl aTtl sml">
+                                    <a data-text="10 điều bạn có thể làm được mà chỉ cần HTML" href="https://www.junookyo.com/2019/10/html-can-do-that.html" rel="bookmark">
+                                    10 điều bạn có thể làm được mà chỉ cần HTML
+                                    </a>
+                                    </h2>
+                                    <div class="pSnpt">
+                                    Ngày nay, bạn có thể tìm một thư viện JS cho mọi tính năng mà bạn cần trong một trang web. Nhưng nhiều khi điều đó trở thành sự lạm dụng quá mức …
+                                    </div>
+                                    <div class="pInf pSml">
+                                    <time class="aTtmp pTtmp pbl" data-text="thg 10 13, 2019" datetime="2019-10-14T05:34:00+07:00" title="Published: tháng 10 13, 2019"></time>
+                                    <a aria-label="Read More" class="pJmp" data-text="Tiếp tục đọc" href="https://www.junookyo.com/2019/10/html-can-do-that.html"></a>
+                                    </div>
+                                    <script type="application/ld+json">
+                                                              {
+                                                                "@context": "https://schema.org",
+                                                                "@type": "BlogPosting",
+                                                                "mainEntityOfPage": {
+                                                                  "@type": "WebPage",
+                                                                  "@id": "https://www.junookyo.com/2019/10/html-can-do-that.html"
+                                                                },
+                                                                "headline": "10 điều bạn có thể làm được mà chỉ cần HTML",
+                                                                "description": "Ngày nay, bạn có thể tìm một thư viện JS cho mọi tính năng mà bạn cần trong một trang web. Nhưng nhiều khi điều đó trở thành sự lạm dụng quá mức khi mà HTML cũng có thể làm được điều tương tự. Hơn nữa, việc sử dụng thư viện JS thừa thãi sẽ làm c&#8230;",
+                                                                
+                                                                "datePublished": "2019-10-14T05:34:00+07:00",
+                                                                "dateModified": "2019-10-14T05:34:36+07:00",
+                                                                
+                                                                "image": {
+                                                                  "@type": "ImageObject",
+                                                                  "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixYbWiU5Pyvk-FM28J3_HSCmFxDGlivQP0cnRn6nlKnMAIQJtIkcovnO3DZEguqSpojj51hA9ncHAgR22oAXdatASv8aIJ3MirXOu4l-dJPrpgLtoEl4hS0WvfItLQcFebmI0d4FEzP5og/w1200-h630-p-k-no-nu/html-can-do-that.png",
+                                                                  "height": 630,
+                                                                  "width": 1200
+                                                                },
+                                                          
+                                                                "publisher": {
+                                                                  "@type": "Organization",
+                                                                  "name": "Juno_okyo&#39;s Blog",
+                                                                  "logo": {
+                                                                    "@type": "ImageObject",
+                                                                    "url": "https://1.bp.blogspot.com/-50s1RMWV7jI/X8OaYjJcMiI/AAAAAAAAQK4/sWcpbaP0Sq0hsW473Vnb8AyBvYvdSQEPwCNcBGAsYHQ/s0/jd-logo.png",
+                                                                    "width": 297,
+                                                                    "height": 45
+                                                                  }
+                                                                },
+                                                          
+                                                                "author": {
+                                                                  "@type": "Person",
+                                                                  "name": "JUNO_OKYO",
+                                                                  "url": "https://draft.blogger.com/profile/13108460837035618815",
+                                                                  "image": "//blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL3yrcwWnlPeCOG6T3jtIoy42wtnpAvvPmo4s77w6SqVUi9xkSQam983z330vy7o-zOD77wK3qlMNIw5VhDcBAqMyJvtkcODRCf7FXXfsoCse2BRsdTXAPByodpi3C9zI/s113/juno-okyo-logo.png"
+                                                                }
+                                                              }
+                                                            </script>
+                                    </div>
+                                    </article>
+                                    </div>
+                                    <div class="blogPg" id="blogPager"><a aria-label="Tải thêm bài đăng" class="jsLd" data-text="Tải thêm bài đăng" href="javascript:;"></a></div>
+                                    </div>
+                            </div>
+
+
+                        </main>
+
+                        <!-- Side bar-->
+                        <aside class="blogItm sidebar">
+                            <div class="sideIn">
+                            <div class="section" id="side-widget"><div class="widget PopularPosts" data-version="2" id="PopularPosts00">
+                            <h2 class="title">Popular Posts</h2>
+                            <div class="itemPp" role="feed">
+                            <article class="itm mostP">
+                            <div class="iThmb pThmb">
+                            <a class="thmb" href="https://www.junookyo.com/2017/07/j2team-cookies-chrome-extension.html">
+                            <img alt="J2TEAM Cookies - Chia sẻ tài khoản mà không sợ lộ mật khẩu" class="imgThm lazy loaded" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSWoAGdbApf0A0G-vomUk0yVYFX-wlkjZZ6Gpg0ioU3ySB6k9BIz6riXw05QBXirg3ZTAPYYb3BvCWwSyaBi4SJolC5Q-82al1DM1LikqZCWuzKLTrZfX-hBrRDvlcGwa58FqOnjLl-MJY/w600-h300-p-k-no-nu/j2team-cookies-extension.png" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSWoAGdbApf0A0G-vomUk0yVYFX-wlkjZZ6Gpg0ioU3ySB6k9BIz6riXw05QBXirg3ZTAPYYb3BvCWwSyaBi4SJolC5Q-82al1DM1LikqZCWuzKLTrZfX-hBrRDvlcGwa58FqOnjLl-MJY/w600-h300-p-k-no-nu/j2team-cookies-extension.png" lazied="">
+                            <noscript><img alt='J2TEAM Cookies - Chia sẻ tài khoản mà không sợ lộ mật khẩu' class='imgThm' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSWoAGdbApf0A0G-vomUk0yVYFX-wlkjZZ6Gpg0ioU3ySB6k9BIz6riXw05QBXirg3ZTAPYYb3BvCWwSyaBi4SJolC5Q-82al1DM1LikqZCWuzKLTrZfX-hBrRDvlcGwa58FqOnjLl-MJY/w600-h300-p-k-no-nu/j2team-cookies-extension.png'/></noscript>
+                            </a>
+                            </div>
+                            <div class="iInf pSml">
+                            <time class="aTtmp iTtmp pbl" data-text="thg 7 28" datetime="2017-07-28T11:14:00+07:00" title="Published: tháng 7 28, 2017"></time>
+                            <div class="pLbls" data-text="in">
+                            <a aria-label="Add-on" data-text="Add-on" href="https://www.junookyo.com/search/label/Add-on" rel="tag">
+                            </a>
+                            <a aria-label="Chrome" data-text="Chrome" href="https://www.junookyo.com/search/label/Chrome" rel="tag">
+                            </a>
+                            </div>
+                            </div>
+                            <div class="iCtnt">
+                            <div class="iInr">
+                            <h3 class="iTtl aTtl"><a href="https://www.junookyo.com/2017/07/j2team-cookies-chrome-extension.html">J2TEAM Cookies - Chia sẻ tài khoản mà không sợ lộ mật khẩu</a></h3>
+                            <div class="pSnpt">
+                            J2TEAM Cookies  là &nbsp;một extension  tớ code cho ông anh dùng cơ mà nhân tiện up lên Chrome  Store luôn để cho mọi người cùng sử dụng. Nó giúp các …
+                            </div>
+                            </div>
+                            </div>
+                            </article>
+                            <article class="itm">
+                            <div class="iInf pSml">
+                            <time class="aTtmp iTtmp pbl" data-text="thg 10 27" datetime="2012-10-28T03:23:00+07:00" title="Published: tháng 10 27, 2012"></time>
+                            <div class="pLbls" data-text="in">
+                            <a aria-label="GHDB" data-text="GHDB" href="https://www.junookyo.com/search/label/GHDB" rel="tag">
+                            </a>
+                            </div>
+                            </div>
+                            <div class="iCtnt">
+                            <div class="iInr">
+                            <h3 class="iTtl aTtl"><a href="https://www.junookyo.com/2012/10/google-hacking-database-ghdb.html">Google Hacking DataBase (GHDB)</a></h3>
+                            </div>
+                            </div>
+                            </article>
+                            <article class="itm">
+                            <div class="iInf pSml">
+                            <time class="aTtmp iTtmp pbl" data-text="thg 11 30" datetime="2012-11-30T23:23:00+07:00" title="Published: tháng 11 30, 2012"></time>
+                            <div class="pLbls" data-text="in">
+                            <a aria-label="Exploit" data-text="Exploit" href="https://www.junookyo.com/search/label/Exploit" rel="tag">
+                            </a>
+                            <a aria-label="PHP" data-text="PHP" href="https://www.junookyo.com/search/label/PHP" rel="tag">
+                            </a>
+                            </div>
+                            </div>
+                            <div class="iCtnt">
+                            <div class="iInr">
+                            <h3 class="iTtl aTtl"><a href="https://www.junookyo.com/2012/11/phpfox-301-cross-site-scripting.html">PhpFox 3.0.1 Cross Site Scripting (XSS)</a></h3>
+                            </div>
+                            </div>
+                            </article>
+                            <article class="itm">
+                            <div class="iInf pSml">
+                            <time class="aTtmp iTtmp pbl" data-text="thg 10 27" datetime="2012-10-28T02:19:00+07:00" title="Published: tháng 10 27, 2012"></time>
+                            <div class="pLbls" data-text="in">
+                            <a aria-label="GHDB" data-text="GHDB" href="https://www.junookyo.com/search/label/GHDB" rel="tag">
+                            </a>
+                            <a aria-label="Shell" data-text="Shell" href="https://www.junookyo.com/search/label/Shell" rel="tag">
+                            </a>
+                            </div>
+                            </div>
+                            <div class="iCtnt">
+                            <div class="iInr">
+                            <h3 class="iTtl aTtl"><a href="https://www.junookyo.com/2012/10/2012-dorks-shell.html">2012 Dorks &amp; Shell</a></h3>
+                            </div>
+                            </div>
+                            </article>
+                            <article class="itm">
+                            <div class="iInf pSml">
+                            <time class="aTtmp iTtmp pbl" data-text="thg 6 20" datetime="2018-06-20T22:05:00+07:00" title="Published: tháng 6 20, 2018"></time>
+                            <div class="pLbls" data-text="in">
+                            <a aria-label="Security" data-text="Security" href="https://www.junookyo.com/search/label/Security" rel="tag">
+                            </a>
+                            <a aria-label="TUTORIALS" data-text="TUTORIALS" href="https://www.junookyo.com/search/label/TUTORIALS" rel="tag">
+                            </a>
+                            </div>
+                            </div>
+                            <div class="iCtnt">
+                            <div class="iInr">
+                            <h3 class="iTtl aTtl"><a href="https://www.junookyo.com/2018/06/huong-dan-chong-lai-hacker.html">Hướng dẫn bảo vệ bạn chống lại các Hacker</a></h3>
+                            </div>
+                            </div>
+                            </article>
+                            </div>
+                            </div><div class="widget Label" data-version="2" id="Label00">
+                            <h3 class="title">
+                            Labels
+                            </h3>
+                            <div class="wL pSml bg cl">
+                            <div class="lbSz s-5">
+                            <a aria-label="TUTORIALS" class="lbN" href="https://www.junookyo.com/search/label/TUTORIALS">
+                            <span class="lbT">TUTORIALS</span>
+                            <span class="lbC" data-text="(523)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-4">
+                            <a aria-label="Exploit" class="lbN" href="https://www.junookyo.com/search/label/Exploit">
+                            <span class="lbT">Exploit</span>
+                            <span class="lbC" data-text="(173)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-4">
+                            <a aria-label="Security" class="lbN" href="https://www.junookyo.com/search/label/Security">
+                            <span class="lbT">Security</span>
+                            <span class="lbC" data-text="(136)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-4">
+                            <a aria-label="SQL Injection" class="lbN" href="https://www.junookyo.com/search/label/SQL%20Injection">
+                            <span class="lbT">SQL Injection</span>
+                            <span class="lbC" data-text="(133)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-4">
+                            <a aria-label="Tools" class="lbN" href="https://www.junookyo.com/search/label/Tools">
+                            <span class="lbT">Tools</span>
+                            <span class="lbC" data-text="(131)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-4">
+                            <a aria-label="XSS" class="lbN" href="https://www.junookyo.com/search/label/XSS">
+                            <span class="lbT">XSS</span>
+                            <span class="lbC" data-text="(101)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSh">
+                            <input class="lbIn hidden" id="lbAl-1" type="checkbox">
+                            <div class="lbAl">
+                            <div class="lbSz s-3">
+                            <a aria-label="Software" class="lbN" href="https://www.junookyo.com/search/label/Software">
+                            <span class="lbT">Software</span>
+                            <span class="lbC" data-text="(55)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-3">
+                            <a aria-label="PHP" class="lbN" href="https://www.junookyo.com/search/label/PHP">
+                            <span class="lbT">PHP</span>
+                            <span class="lbC" data-text="(53)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-3">
+                            <a aria-label="AutoIT" class="lbN" href="https://www.junookyo.com/search/label/AutoIT">
+                            <span class="lbT">AutoIT</span>
+                            <span class="lbC" data-text="(39)"></span>
+                            </a>
+                            </div>
+                            <div class="lbSz s-1">
+                            <a aria-label="J2TEAM" class="lbN" href="https://www.junookyo.com/search/label/J2TEAM">
+                            <span class="lbT">J2TEAM</span>
+                            <span class="lbC" data-text="(27)"></span>
+                            </a>
+                            </div>
+                            </div>
+                            <label aria-label="Show labels" class="lbM" data-hide="Ẩn bớt" data-show="Hiện thêm" data-text="(+4)" for="lbAl-1"></label>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <!--[ Sidebar sticky ]-->
+                            <div class="sideSticky section" id="side-sticky"><div class="widget HTML" data-version="2" id="HTML95">
+                            <div class="adB" data-text="Quảng cáo hiển thị ở đây"></div>
+                            </div></div>
+                            </div>
+                            </aside>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <div class="scrBtnctn">
-        <button id="scrollToTopBtn">
-            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/up.png" alt="up"/>
-        </button>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+        <div class="scrBtnctn">
+            <button id="scrollToTopBtn">
+                <img width="24" height="24"
+                    src="https://img.icons8.com/material-outlined/24/up.png"
+                    alt="up" />
+            </button>
+        </div>
+
+        <footer class="footer">
+            <div class="ft-container">
+                <div class="ft-left">
+                    a
+                </div>
+
+                <div class="ft-right">
+                    b
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>

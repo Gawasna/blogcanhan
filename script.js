@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     // Add scroll event to show or hide the button
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             scrollToTopBtn.style.display = 'block';
         } else {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add click event to scroll to the top
-    scrollToTopBtn.addEventListener('click', function() {
+    scrollToTopBtn.addEventListener('click', function () {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     });
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchIcon = document.querySelector('.search-icon');
     const clearIcon = document.querySelector('.clear-icon');
 
-    searchField.addEventListener('input', function() {
+    searchField.addEventListener('input', function () {
         if (searchField.value) {
             searchIcon.style.display = 'none';
             clearIcon.style.display = 'block';
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    clearIcon.addEventListener('click', function() {
+    clearIcon.addEventListener('click', function () {
         searchField.value = '';
         searchIcon.style.display = 'block';
         clearIcon.style.display = 'none';
         searchField.focus();
     });
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (!searchForm.contains(event.target)) {
             searchField.value = '';
             searchIcon.style.display = 'block';
@@ -46,22 +46,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    var sf = document.getElementById("searchfield");
+    let theme = 'light';
 
-    const lightFuncBtn = document.querySelector('.glb-btn-container');
-    const lightModeIcon = document.getElementById('light-mode');
-    const darkModeIcon = document.getElementById('dark-mode');
-
-    lightFuncBtn.addEventListener('click', function() {
-        if (lightModeIcon.style.display === 'none') {
-            lightModeIcon.style.display = 'block';
-            darkModeIcon.style.display = 'none';
-            header.style.backgroundImage = 'url("somt/aesthetic-stars.gif")';
-            sf.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+    function toggleTheme() {
+        if (theme === 'light') {
+            theme = 'dark';
+            document.body.classList.add('dark-mode');
+            document.getElementById('light-mode').style.display = 'block';
+            document.getElementById('dark-mode').style.display = 'none';
+            //vừa xóa black dòng dưới
+            document.querySelector('.header-container').style.background = '';
         } else {
-            lightModeIcon.style.display = 'none';
-            darkModeIcon.style.display = 'block';
-            header.style.backgroundImage = 'none';
+            theme = 'light';
+            document.body.classList.remove('dark-mode');
+            document.getElementById('light-mode').style.display = 'none';
+            document.getElementById('dark-mode').style.display = 'block';
+            document.querySelector('.header-container').style.background = '';
         }
-    });
+    }
+
+    document.getElementById('light-mode').addEventListener('click', toggleTheme);
+    document.getElementById('dark-mode').addEventListener('click', toggleTheme);
 });
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
