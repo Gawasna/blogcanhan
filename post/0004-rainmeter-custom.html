@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://img.icons8.com/material-outlined/24/up.png">
+    <title>Gawasna's Blog</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="../soft1.jpg">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+    <input class="navIn hidden" id="offNav" type="checkbox">
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-nav-btn">
+                    <label class="label-nav" for="offNav">
+                        <img id="navbtn" width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/menu--v1.png"
+                            alt="menu--v1" />
+                    </label>
+                </div>
+                <div class="header-title">
+                    <a href="../index.html">
+                    <p class="headerH">
+                        <span>Gawasna's Blog</span>
+                    </p></a>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="h-right-container">
+                    <div class="search-ctn">
+                        <form class="search-form" action="/error/404NotFound.html">
+                            <input type="text" name="search" id="searchfield" placeholder="Search something..."
+                                autocomplete="off">
+                            <span class="search-icon">
+                                <img id="searchbtn" width="20" height="20"
+                                    src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
+                            </span>
+                            <span class="clear-icon">
+                                <img id="clear-svg" width="20" height="20"
+                                    src="https://img.icons8.com/ios/50/delete-sign--v1.png" alt="delete-sign--v1" />
+                            </span>
+                        </form>
+                    </div>
+                    <div class="glb-btn-container" style="list-style: none;">
+                        <button id="light-mode" style="display: none;">
+                            <span>
+                                <img id="sun-icon" width="20" height="20"
+                                    src="https://img.icons8.com/parakeet-line/20/sun.png" alt="sun" />
+                            </span>
+                        </button>
+
+                        <button id="dark-mode">
+                            <span>
+                                <img id="moon-icon" width="20" height="20"
+                                    src="https://img.icons8.com/ios/20/crescent-moon.png" alt="crescent-moon" />
+                            </span>
+                        </button>
+
+                        <button id="about-btn" onclick="window.location.href='http://github.com/Gawasna';">
+                            <span>
+                                <img id="about-icon" width="20" height="20"
+                                    src="https://img.icons8.com/ios/20/user--v1.png" alt="user--v1" />
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="blogMn" style="border-right: black 1px solid;">
+            <div class="mnBr">
+                <div class="mnBrs">
+                    <!-- nav trên -->
+                    <div class="mnMob section" id="nav-widget-1">
+                        <div class="widget PageList"  style="width: auto;
+                            margin-left: 10px;" id="PageList002">
+                            <ul class="mMenu">
+                                <li>
+                                    <span>Site map</span>
+                                </li>
+                                <li>
+                                    <span>Disclaimer</span>
+                                </li>
+                                <li>
+                                    <span>Privacy</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- nav dưới-->
+                        <div class="widget LinkList" id="LinkList002">
+                            <ul class="mSoc">
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H17V18h4a1,1,0,0,0,0-2H17V14a2,2,0,0,1,2-2h2a1,1,0,0,0,0-2H19a4,4,0,0,0-4,4v2H12a1,1,0,0,0,0,2h3v9H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M22,3H10a7,7,0,0,0-7,7V22a7,7,0,0,0,7,7H22a7,7,0,0,0,7-7V10A7,7,0,0,0,22,3Zm5,19a5,5,0,0,1-5,5H10a5,5,0,0,1-5-5V10a5,5,0,0,1,5-5H22a5,5,0,0,1,5,5Z">
+                                            </path>
+                                            <path
+                                                d="M16,9.5A6.5,6.5,0,1,0,22.5,16,6.51,6.51,0,0,0,16,9.5Zm0,11A4.5,4.5,0,1,1,20.5,16,4.51,4.51,0,0,1,16,20.5Z">
+                                            </path>
+                                            <circle cx="23" cy="9" r="1"></circle>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M13.35,28A13.66,13.66,0,0,1,2.18,22.16a1,1,0,0,1,.69-1.56l2.84-.39A12,12,0,0,1,5.44,4.35a1,1,0,0,1,1.7.31,9.87,9.87,0,0,0,5.33,5.68,7.39,7.39,0,0,1,7.24-6.15,7.29,7.29,0,0,1,5.88,3H29a1,1,0,0,1,.9.56,1,1,0,0,1-.11,1.06L27,12.27c0,.14,0,.28-.05.41a12.46,12.46,0,0,1,.09,1.43A13.82,13.82,0,0,1,13.35,28ZM4.9,22.34A11.63,11.63,0,0,0,13.35,26,11.82,11.82,0,0,0,25.07,14.11,11.42,11.42,0,0,0,25,12.77a1.11,1.11,0,0,1,0-.26c0-.22.05-.43.06-.65a1,1,0,0,1,.22-.58l1.67-2.11H25.06a1,1,0,0,1-.85-.47,5.3,5.3,0,0,0-4.5-2.51,5.41,5.41,0,0,0-5.36,5.45,1.07,1.07,0,0,1-.4.83,1,1,0,0,1-.87.2A11.83,11.83,0,0,1,6,7,10,10,0,0,0,8.57,20.12a1,1,0,0,1,.37,1.05,1,1,0,0,1-.83.74Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z">
+                                            </path>
+                                            <path
+                                                d="M22,12a3,3,0,0,1-3-3,1,1,0,0,0-2,0V19a3,3,0,1,1-3-3,1,1,0,0,0,0-2,5,5,0,1,0,5,5V13a4.92,4.92,0,0,0,3,1,1,1,0,0,0,0-2Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z">
+                                            </path>
+                                            <path
+                                                d="M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="a tIc bIc">
+                                        <svg viewBox="0 0 32 32">
+                                            <path
+                                                d="M24,28a1,1,0,0,1-.62-.22l-6.54-5.23a1.83,1.83,0,0,1-.13.16l-4,4a1,1,0,0,1-1.65-.36L8.2,18.72,2.55,15.89a1,1,0,0,1,.09-1.82l26-10a1,1,0,0,1,1,.17,1,1,0,0,1,.33,1l-5,22a1,1,0,0,1-.65.72A1,1,0,0,1,24,28Zm-8.43-9,7.81,6.25L27.61,6.61,5.47,15.12l4,2a1,1,0,0,1,.49.54l2.45,6.54,2.89-2.88-1.9-1.53A1,1,0,0,1,13,19a1,1,0,0,1,.35-.78l7-6a1,1,0,1,1,1.3,1.52Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mnMen section" id="nav-widget-2">
+                        <div class="widget HTML" id="HTML000">
+                            <ul class="mnMn" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                                <li class="drp">
+                                    <input class="drpI hidden" id="drpDwn-1" name="drpDwn" type="checkbox">
+                                    <label class="a" for="drpDwn-1">
+                                        <img width="30" height="30" class="nv-icon-z" src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/30/external-Post-social-media-bearicons-detailed-outline-bearicons.png" alt="external-Post-social-media-bearicons-detailed-outline-bearicons"/>
+                                        <span class="n" style="font-size: 15px;
+                                        margin-left: 10px;">Posts</span>
+                                        <img width="20" height="20" class="nv-icon-z" src="https://img.icons8.com/ios/20/down-squared--v1.png" alt="down-squared--v1"/>
+                                    </label>
+                                    <!--as File type-->
+                                    <ul>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener"
+                                                target="_blank">Tin tức</a>
+                                        </li>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener"
+                                                target="_blank">Thủ thuật</a>
+                                        </li>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener"
+                                                target="_blank">Hướng dẫn</a>
+                                        </li>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener"
+                                                target="_blank">Công cụ</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="drp br">
+                                    <input class="drpI hidden" id="drpDwn-2" name="drpDwn" type="checkbox">
+                                    <label class="a" for="drpDwn-2">
+                                        <img width="30" height="30" class="nv-icon-z" src="https://img.icons8.com/ios/30/puzzle.png" alt="puzzle"/>
+                                        <span class="n" style="font-size: 15px;
+                                        margin-left: 10px;">Nội dung khác</span>
+                                        <img width="20" height="20" class="nv-icon-z" src="https://img.icons8.com/ios/20/down-squared--v1.png" alt="down-squared--v1"/>
+                                    </label>
+                                    <ul>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener nofollow" target="_blank">Tiện ích</a>
+                                        </li>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener nofollow" target="_blank">Phần mềm</a>
+                                        </li>
+                                        <li itemprop="name">
+                                            <a href="" itemprop="url" rel="noopener nofollow" target="_blank">Sưu tầm</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li style="margin-top: 20px;">
+                                    <a href="">
+                                    <p id="whatnews" style="color: rgb(0, 90, 193);">Có gì mới ?</p>                               
+                                    <img style="width: 190px" src="https://www.alburolaw.com/wp-content/uploads/2020/02/Picture1b.png" alt="">
+                                    </a>
+                                </li>
+
+                                <li class="br">
+                                    <a class="a" href="" itemprop="url">
+                                        <img width="20" height="20" class="nv-icon-z" src="https://img.icons8.com/ios/30/phone.png" alt="phone"/>
+                                        <span class="n" style="font-size: 15px; margin-left: 10px;" itemprop="name">Liên hệ</span>
+                                    </a>
+                                </li>
+
+                                <li class="br">
+                                    <a class="a" href="" itemprop="url">
+                                        <img width="20" height="20" class="nv-icon-z" src="https://img.icons8.com/ios/30/about.png" alt="about"/>
+                                        <span class="n" style="font-size: 15px; margin-left: 10px;" itemprop="name">Về tôi</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-container">
+            <div class="blog-section">
+                <div class="blog-main">
+
+                    <main class="blogtm mainbar">
+
+                        <div class="post-container">
+                            <div class="post-category">Công cụ</div>
+                            <h1 class="post-title">Làm màn hình của bạn đẹp mắt hơn với Rainmeter</h1>
+                            <div class="post-summary">"Rainmeter là một công cụ mạnh mẽ giúp bạn tùy biến và làm đẹp màn hình desktop theo ý thích. Công cụ tạo nên một giao diện độc đáo và bắt mắt. Cùng khám phá để biến màn hình của bạn thành một tác phẩm nghệ thuật số!"</div>
+                            <div class="post-meta">
+                                <span class="post-author">Người đăng: Gawasna</span>
+                                <span class="post-date">Ngày đăng: 23/06/2024</span>
+                                <span class="post-length">Độ dài đọc: 5 phút</span>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-hl-text">Giới thiệu về Rainmeter</h3>
+                                <p class="post-raw-text">Rainmeter là một ứng dụng tùy chỉnh giao diện desktop dành cho Windows, cho phép bạn hiển thị các thông tin hệ thống, ghi chú, đồng hồ, thời tiết, và nhiều widget khác trực tiếp trên màn hình. Điều này giúp bạn cá nhân hóa máy tính theo phong cách riêng của mình và nâng cao trải nghiệm sử dụng hàng ngày. Với Rainmeter, bạn có thể tạo ra những bố cục desktop độc đáo và tiện ích, phản ánh phong cách và nhu cầu cá nhân.</p>
+                                <img class="post-photo" src="https://i.ytimg.com/vi/WIGQRdo5GSY/maxresdefault.jpg" alt="">
+                                <h3 class="post-hl-text">Cách cài đặt Rainmeter</h3>
+                                <p class="post-raw-text">Để bắt đầu, bạn cần tải xuống và cài đặt Rainmeter từ trang <a href="https://www.rainmeter.net/">web</a> chính thức. Sau khi tải về, hãy mở tệp cài đặt và làm theo hướng dẫn để cài đặt ứng dụng. Sau khi cài đặt xong, Rainmeter sẽ tự động khởi động và bạn sẽ thấy một số widget mặc định xuất hiện trên màn hình của mình. Bạn có thể kéo và thả các widget này đến vị trí mong muốn hoặc ẩn chúng nếu không cần thiết.</p>
+                                <img class="post-photo" src="../img/0004-1.png" alt="">
+                                <h3 class="post-hl-text">Tìm kiếm và cài đặt skins</h3>
+                                <p class="post-raw-text">Skins là các gói tùy chỉnh giao diện mà bạn có thể tải về và cài đặt trong Rainmeter. Có rất nhiều trang web cung cấp skins miễn phí, chẳng hạn như <a>DeviantArt</a> và <a>Rainmeter's forums</a>. Khi đã tải về một skin, bạn chỉ cần giải nén nó vào thư mục Rainmeter's Skins. Sau đó, mở Rainmeter và chọn skin từ danh sách để áp dụng nó vào màn hình của bạn. Hãy thử nhiều skin khác nhau để tìm ra phong cách phù hợp nhất với bạn.</p>
+                                <img class="post-photo" src="../img/0004-2.png" alt="">
+                                <h3 class="post-hl-text">Tùy chỉnh và cấu hình widget</h3>
+                                <p class="post-raw-text">Một trong những điểm mạnh của Rainmeter là khả năng tùy chỉnh và cấu hình widget theo ý thích. Bạn có thể thay đổi kích thước, màu sắc, vị trí, và nội dung của mỗi widget để phản ánh phong cách cá nhân của mình. Ngoài ra, bạn cũng có thể tạo ra các widget tùy chỉnh hoàn toàn mới bằng cách sử dụng ngôn ngữ Lua hoặc một số công cụ khác.</p>
+                                <img class="post-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/20210813_20_19_23-Manage_Rainmeter.png" alt="">
+                                <h3 class="post-hl-text">Sáng tạo với Rainmeter</h3>
+                                <p class="post-raw-text">Với Rainmeter, chỉ có trí tưởng tượng là giới hạn. Bạn có thể tạo ra các giao diện desktop độc đáo và sáng tạo, từ các bố cục đơn giản đến những tác phẩm nghệ thuật số phức tạp. Hãy thử kết hợp các widget, skins, và công cụ tùy chỉnh để tạo ra một màn hình desktop độc đáo và phản ánh phong cách của riêng bạn.</p>
+                                <img class="post-photo" src="https://www.portableone.com/images/rainmeter-for-windows-10-001.jpg">
+                            </div>
+                            <div class="post-share">
+                                <span>Chia sẻ:</span>
+                                <a id="facebook-i" href="#" class="share-button facebook">Facebook</a>
+                                <a id="twitter-i" href="" class="share-button twitter">Twitter</a>
+                                <a id="whatsapp-i" href="" class="share-button whatsapp">Whatsapp</a>
+                            </div>
+                        </div>
+
+                        <!-- bài đăng -->
+                        <div class="section" id="main-widget">
+                            <div class="widget Blog" id="Blog1" style="padding-top: 20px;">
+                                <div class="blogTtl hm">
+                                    <h3 class="title" style="font-weight: lighter;     
+                                    ">Bài đăng mới nhất</h>
+                                </div>
+
+                                <div class="blog-container1">
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyF_bdOH7ftqDktAezgup52ibrk51E1FVm8w&s" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Thủ thuật</div>
+                                            <h2 class="p-title">Xóa biểu tượng shortcut trên desktop với Winaero Tweaker</h2>
+                                        </a>
+                                        <p class="p-excerpt">Biểu tượng shortcut trên desktop có thể làm rối mắt và giảm tính thẩm mỹ của màn hình. Sử dụng Winaero Tweaker, một công cụ tùy chỉnh Windows miễn phí, để xóa các biểu tượng shortcut một cách nhanh chóng và dễ dàng.</p>
+                                        <div class="p-date">Ngày đăng: 02/06/2024</div>
+
+                                    </div>
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://openassistive.org/items/autohotkey.png" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Công cụ</div>
+                                            <h2 class="p-title">Tự động hóa thao tác bằng Auto Hot Key</h2>
+                                        </a>
+                                        <p class="p-excerpt">Auto Hot Key là một công cụ mạnh mẽ giúp tự động hóa các thao tác lặp đi lặp lại trên máy tính. Với Auto Hot Key, bạn có thể tạo các script tùy chỉnh để tiết kiệm thời gian và tăng hiệu suất làm việc. </p>
+                                        <div class="p-date">Ngày đăng: 03/06/2024</div>
+
+                                    </div>
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://storage.googleapis.com/swipe-insight/content/images/article_images/lgs_4955626301.webp" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Tin tức</div>
+                                            <h2 class="p-title">SponsorBlock vừa cập nhật bản beta 5.7 ngăn chặn Server-side injected ads</h2>
+                                        </a>
+                                        <p class="p-excerpt">SponsorBlock ra mắt bản cập nhật beta 5.7 với khả năng ngăn chặn quảng cáo chèn từ phía máy chủ (Server-side injected ads), cải thiện trải nghiệm xem video mà không bị gián đoạn bởi quảng cáo không mong muốn.</p>
+                                        <div class="p-date">Ngày đăng: 12/06/2024</div>
+
+                                    </div>
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://i.ytimg.com/vi/kEEx31DQC2M/sddefault.jpg" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Huớng dẫn</div>
+                                            <h2 class="p-title">Cài đặt trình biên dịch MinGW cho VSCode</h2>
+                                        </a>
+                                        <p class="p-excerpt">Hướng dẫn cài đặt MinGW, trình biên dịch GCC, và tích hợp nó vào Visual Studio Code (VSCode) để lập trình C/C++.</p>
+                                        <div class="p-date">Ngày đăng: 02/06/2024</div>
+
+                                    </div>
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwI_Re_gXR1ohPJ0HP2l9ltB5Zus10zNt1GHU6zfR6bOjuArNICMfG4YOV_9Nd9LzXVVWL2JNgMi9Wp0hb806FN2omAn8JNJcFY-T1RccuKIyhBEO6SbIz3ehfRIIFeGFdDLZNt-pJA6HM6swYzq9vbNxCepzQsHB2z4VIFw8mDOyUryzkMZyVHd1U/s2490/2.png" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Công cụ</div>
+                                            <h2 class="p-title">Thay đổi themes Powershell với Oh-my-posh và config gợi ý command trên Windows</h2>
+                                        </a>
+                                        <p class="p-excerpt">Tùy chỉnh giao diện PowerShell bằng Oh-my-posh và cấu hình gợi ý lệnh để cải thiện trải nghiệm dòng lệnh trên Windows.</p>
+                                        <div class="p-date">Ngày đăng: 02/06/2024</div>
+
+                                    </div>
+                                    <div class="blog-post">
+                                        <a href="#/#">
+                                            <img src="https://images.datacamp.com/image/upload/v1718108862/image_fa5d276326.png" alt="Thumbnail 2" class="p-thumbnail">
+                                            <div class="p-category">Công cụ</div>
+                                            <h2 class="p-title">Chạy model AI Stable Diffusion ngay trên PC của bạn</h2>
+                                        </a>
+                                        <p class="p-excerpt">Hướng dẫn cài đặt và chạy mô hình AI Stable Diffusion trên máy tính cá nhân, cho phép bạn tạo ra các hình ảnh chất lượng cao bằng công nghệ AI ngay tại nhà.</p>
+                                        <div class="p-date">Ngày đăng: 02/06/2024</div>
+
+                                    </div>
+
+                                <div class="blogPg" id="blogPager"><a>Tải thêm bài đăng</a></div>
+                            </div>
+                        </div>
+
+                    </main>
+
+                    <!-- Side bar-->
+                    <aside class="blogItm sidebar">
+                        <div class="sideIn">
+                            <div class="section" id="side-widget">
+                                <div class="widget PopularPosts" data-version="2" id="PopularPosts00">
+                                    <h2 class="title" style="font-weight: lighter;     
+                                    border-bottom: #909090 1px solid;
+                                    font-weight: lighter;
+                                    width: 97%;
+                                    padding: 3px;">Bài đăng phổ biến</h2>
+                                    <div class="itemPp" role="feed">
+                                        <article class="itm mostP">
+                                            <div class="iThmb pThmb">
+                                                <a class="thmb"
+                                                    href="#">
+                                                    <img alt="thumbnail"
+                                                        class="imgThm lazy loaded"
+                                                        src="https://media.geeksforgeeks.org/wp-content/uploads/20230617191236/How-to-Host-Your-Website-on-Github-for-Free-copy.webp"
+                                                        lazied="">
+                                                   </a>
+                                            </div>
+                                            <div class="iInf pSml">
+                                               <p class="posttimelb">
+                                                Thứ Sáu , 23 th 7 2024
+                                               </p>
+                                            </div>
+                                            <div class="iCtnt">
+                                                <div class="iInr">
+                                                    <h3 class="iTtl aTtl"><a
+                                                            href="#">Tạo đường trang web tĩnh của bạn với Github Host</a></h3>
+                                                    <div class="pSnpt">
+                                                        Hướng dẫn cách sử dụng GitHub để tạo và lưu trữ trang web tĩnh, từ việc thiết lập repository đến triển khai trang web trực tuyến, giúp bạn dễ dàng chia sẻ nội dung của mình với mọi người.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="itm">
+                                            <div class="iInf pSml">
+                                                <p class="posttimelb">
+                                                 Thứ Sáu , 23 th 7 2024
+                                                </p>
+                                             </div>
+                                            <div class="iCtnt">
+                                                <div class="iInr">
+                                                    <h3 class="iTtl aTtl"><a
+                                                            href="">Chi tiết cách cài đặt bộ biên dịch C++ MSY64 cho VSCode</a></h3>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="itm">
+                                            <div class="iInf pSml">
+                                                <p class="posttimelb">
+                                                 Thứ Sáu , 23 th 7 2024
+                                                </p>
+                                             </div>
+                                            <div class="iCtnt">
+                                                <div class="iInr">
+                                                    <h3 class="iTtl aTtl"><a
+                                                            href="">Tạo chủ đề tùy chỉnh cho cmd (PowerShell) của bạn với oh-my-posh</a></h3>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="itm">
+                                            <div class="iInf pSml">
+                                                <p class="posttimelb">
+                                                 Thứ Sáu , 23 th 7 2024
+                                                </p>
+                                             </div>
+                                            <div class="iCtnt">
+                                                <div class="iInr">
+                                                    <h3 class="iTtl aTtl"><a
+                                                            href="">Chạy model AI Stable Diffusion ngay trên PC của bạn</a></h3>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="itm">
+                                            <div class="iInf pSml">
+                                                <p class="posttimelb">
+                                                 Thứ Sáu , 23 th 7 2024
+                                                </p>
+                                             </div>
+                                            <div class="iCtnt">
+                                                <div class="iInr">
+                                                    <h3 class="iTtl aTtl"><a
+                                                            href="">Tổng hợp những extension phổ biến trên trình duyệt</a></h3>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="widget Label" data-version="2" id="Label00">
+                                    <h3 class="title" style="font-weight: lighter;     
+                                    border-bottom: #909090 1px solid;
+                                    font-weight: lighter;
+                                    width: 97%;
+                                    padding: 3px;">
+                                        Chủ đề
+                                    </h3>
+                                    <div class="wL pSml bg cl">
+                                        <div class="lbSz s-5">
+                                            <a aria-label="tutorials" class="lbN"
+                                                href="">
+                                                <span class="lbT">Hướng dẫn</span>
+                                                <span class="lbC" ></span>
+                                            </a>
+                                        </div>
+                                        <div class="lbSz s-4">
+                                            <a aria-label="new" class="lbN"
+                                                href="">
+                                                <span class="lbT">Tin tức</span>
+                                                <span class="lbC" ></span>
+                                            </a>
+                                        </div>
+                                        <div class="lbSz s-4">
+                                            <a aria-label="tips" class="lbN"
+                                                href="">
+                                                <span class="lbT">Thủ thuật</span>
+                                                <span class="lbC" ></span>
+                                            </a>
+                                        </div>
+                                        <div class="lbSz s-4">
+                                            <a aria-label="tools" class="lbN"
+                                                href="">
+                                                <span class="lbT">Công cụ</span>
+                                                <span class="lbC" ></span>
+                                            </a>
+                                        </div>
+                                        <div class="lbSz s-4">
+                                            <a aria-label="extension" class="lbN"
+                                                href="">
+                                                <span class="lbT">Tiện ích</span>
+                                                <span class="lbC" ></span>
+                                            </a>
+                                        </div>
+                                        <div class="lbSz s-4">
+                                            <a aria-label="application" class="lbN"
+                                                href="">
+                                                <span class="lbT">Ứng dụng</span>
+                                                <span class="lbC"></span>
+                                            </a>
+                                        </div>
+                                            <label class="" for="lbAl-1" style="
+                                            color: blue;
+                                            align-self: center;
+                                            padding :3px;">
+                                                <a>Hiện thêm</a>
+                                            </label>
+                                            <br>
+                                        <div class="lbSh">
+                                            <input class="lbIn hidden" id="lbAl-1" type="checkbox">
+                                            
+                                            <div class="lbAl hidden">
+                                                <div class="lbSz s-3">
+                                                    <a aria-label="collection" class="lbN"
+                                                        href="">
+                                                        <span class="lbT">Sưu tầm</span>
+                                                        <span class="lbC" ></span>
+                                                    </a>
+                                                </div>
+                                                <div class="lbSz s-3">
+                                                    <a aria-label="interest" class="lbN"
+                                                        href="">
+                                                        <span class="lbT">Thú vị</span>
+                                                        <span class="lbC" ></span>
+                                                    </a>
+                                                </div>
+                                                <div class="lbSz s-3">
+                                                    <a aria-label="hardware" class="lbN"
+                                                        href="">
+                                                        <span class="lbT">Phần cứng</span>
+                                                        <span class="lbC" ></span>
+                                                    </a>
+                                                </div>
+                                                <div class="lbSz s-1">
+                                                    <a aria-label="software" class="lbN"
+                                                        href="">
+                                                        <span class="lbT">Phần mềm</span>
+                                                        <span class="lbC" ></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[ Sidebar sticky ]-->
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--scroll to top-->
+    <div class="scrBtnctn">
+        <button id="scrollToTopBtn">
+            <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/up.png" alt="up" />
+        </button>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Gawasna's Blog</h1>
+            <h2>Contact</h2>
+            <address>
+                Somewhere in this world...<br>
+                <a class="footer__btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=hunglepy05@gmail.com">Email Me</a>
+            </address>
+            <div class="contact-w">
+                <ul class="contact-w-list">
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H17V18h4a1,1,0,0,0,0-2H17V14a2,2,0,0,1,2-2h2a1,1,0,0,0,0-2H19a4,4,0,0,0-4,4v2H12a1,1,0,0,0,0,2h3v9H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M22,3H10a7,7,0,0,0-7,7V22a7,7,0,0,0,7,7H22a7,7,0,0,0,7-7V10A7,7,0,0,0,22,3Zm5,19a5,5,0,0,1-5,5H10a5,5,0,0,1-5-5V10a5,5,0,0,1,5-5H22a5,5,0,0,1,5,5Z">
+                                </path>
+                                <path
+                                    d="M16,9.5A6.5,6.5,0,1,0,22.5,16,6.51,6.51,0,0,0,16,9.5Zm0,11A4.5,4.5,0,1,1,20.5,16,4.51,4.51,0,0,1,16,20.5Z">
+                                </path>
+                                <circle cx="23" cy="9" r="1"></circle>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M13.35,28A13.66,13.66,0,0,1,2.18,22.16a1,1,0,0,1,.69-1.56l2.84-.39A12,12,0,0,1,5.44,4.35a1,1,0,0,1,1.7.31,9.87,9.87,0,0,0,5.33,5.68,7.39,7.39,0,0,1,7.24-6.15,7.29,7.29,0,0,1,5.88,3H29a1,1,0,0,1,.9.56,1,1,0,0,1-.11,1.06L27,12.27c0,.14,0,.28-.05.41a12.46,12.46,0,0,1,.09,1.43A13.82,13.82,0,0,1,13.35,28ZM4.9,22.34A11.63,11.63,0,0,0,13.35,26,11.82,11.82,0,0,0,25.07,14.11,11.42,11.42,0,0,0,25,12.77a1.11,1.11,0,0,1,0-.26c0-.22.05-.43.06-.65a1,1,0,0,1,.22-.58l1.67-2.11H25.06a1,1,0,0,1-.85-.47,5.3,5.3,0,0,0-4.5-2.51,5.41,5.41,0,0,0-5.36,5.45,1.07,1.07,0,0,1-.4.83,1,1,0,0,1-.87.2A11.83,11.83,0,0,1,6,7,10,10,0,0,0,8.57,20.12a1,1,0,0,1,.37,1.05,1,1,0,0,1-.83.74Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M24,3H8A5,5,0,0,0,3,8V24a5,5,0,0,0,5,5H24a5,5,0,0,0,5-5V8A5,5,0,0,0,24,3Zm3,21a3,3,0,0,1-3,3H8a3,3,0,0,1-3-3V8A3,3,0,0,1,8,5H24a3,3,0,0,1,3,3Z">
+                                </path>
+                                <path
+                                    d="M22,12a3,3,0,0,1-3-3,1,1,0,0,0-2,0V19a3,3,0,1,1-3-3,1,1,0,0,0,0-2,5,5,0,1,0,5,5V13a4.92,4.92,0,0,0,3,1,1,1,0,0,0,0-2Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z">
+                                </path>
+                                <path
+                                    d="M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="a tIc bIc">
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    d="M24,28a1,1,0,0,1-.62-.22l-6.54-5.23a1.83,1.83,0,0,1-.13.16l-4,4a1,1,0,0,1-1.65-.36L8.2,18.72,2.55,15.89a1,1,0,0,1,.09-1.82l26-10a1,1,0,0,1,1,.17,1,1,0,0,1,.33,1l-5,22a1,1,0,0,1-.65.72A1,1,0,0,1,24,28Zm-8.43-9,7.81,6.25L27.61,6.61,5.47,15.12l4,2a1,1,0,0,1,.49.54l2.45,6.54,2.89-2.88-1.9-1.53A1,1,0,0,1,13,19a1,1,0,0,1,.35-.78l7-6a1,1,0,1,1,1.3,1.52Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </li>
+                </ul>
+            </div>   
+        </div>
+
+        <div class="abothis">
+            <h3>
+                Hello , my name is Gawasna
+            </h3>
+            <div class="abothisctn">
+                This website is created for educational purposes, drawing from various sources. If you have any questions, please contact me at <a style="color: rgb(18, 24, 213);" href="https://github.com/Gawasna">Github</a>.
+            </div>
+        </div>
+
+        <div class="legal">
+            <p>&copy; 2024 Gawasna. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+.post-container {
+    max-width: 900px;
+    padding: 20px;
+    background: #fff;
+}
+
+.dark-mode { 
+    .post-container {
+    background-color: #1e1e1e;
+    }
+    .post-hl-text, 
+    .post-raw-text {
+        color: #fff;
+    }
+    .post-category,
+    .post-summary, 
+    .post-meta{
+        color: #bdbdbd;
+    }
+    .post-title {
+        color: #fff;
+    }
+    #whatnews {
+        color: #fff;
+    }
+}
+ 
+.post-category {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.post-summary {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.post-raw-text {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.post-photo {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+}
+
+.post-hl-text {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.post-meta span {
+    margin-right: 10px;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
+
+.post-content p {
+    margin-bottom: 20px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+.post-share {
+    margin-top: 20px;
+}
+
+.post-share span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.post-container .post-raw-text a {
+    text-decoration: none;
+    color: #0000ff; /* Màu xanh đậm */
+}
+
+.post-container .post-raw-text a:visited {
+    color: #0000ff; /* Màu không thay đổi sau khi click */
+}
+
+.post-container .post-raw-text a:hover {
+    color: #1E90FF; /* Màu sáng hơn khi hover */
+}
+
+.share-button {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.twitter {
+    background: #1da1f2;
+}
+
+.whatsapp {
+    background: #25d366;
+}
