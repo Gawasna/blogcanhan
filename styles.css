@@ -851,15 +851,15 @@ img.nv-icon-z,
 /* Caption text */
 .text {
     color: #000000;
-    font-size:36px;
+    font-size:32px;
     font-family: "Pacifico", cursive;
-    font-weight: bolder;
+    font-weight: lighter;
     padding: 8px 12px;
     position: absolute;
     top: 8px;
     left: 8px;
-    width: auto; /* Đặt chiều rộng tự động để text không tràn ra ngoài container */
-    text-align: left; /* Canh trái cho text */
+    width: auto; 
+    text-align: left;
   }
 
 /* Number text (1/3 etc) */
@@ -1409,7 +1409,7 @@ a {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(5px); /* Thay đổi mức độ blur tại đây */
+    filter: blur(5px);
     z-index: -1;
 }
 
