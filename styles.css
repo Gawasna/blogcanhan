@@ -16,6 +16,7 @@
 
 body {
   position: relative;
+  font-family:var(--fontT) ;
   margin: 0;
   padding: 0 !important;
   width: 100%;
@@ -1405,7 +1406,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./somt/1355035.jpeg);
+    background-image: url(./somt/1355035.jpeg); 
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
