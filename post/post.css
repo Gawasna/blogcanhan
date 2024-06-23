@@ -68,6 +68,8 @@
     font-family: 'Courier New', Courier, monospace;
     background-color: #989898;
     padding: 5px;
+    text-align: left;
+    text-wrap: unset;
 }
 
 .post-hl-text {
