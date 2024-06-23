@@ -51,7 +51,7 @@
 }
 
 .post-raw-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5em;
 }
 
@@ -60,6 +60,14 @@
     margin: 0 auto;
     max-width: 90%;
     height: auto;
+}
+
+.post-code {
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #989898;
+    padding: 5px;
 }
 
 .post-hl-text {
