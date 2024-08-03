@@ -54,7 +54,7 @@ body {
   background-color: #000000;
   cursor: pointer;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 #scrollToTopBtn img {
@@ -1543,4 +1543,50 @@ a {
   .footer__nav {
     flex: 2 0px;
   }
+}
+
+/* #searching func */
+/* Thanh kết quả tìm kiếm */
+#search-results {
+  display: none; /* Hidden by default, shown when searching */
+  position: absolute;
+  top: 100%; /* Position below the input field */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners for the results dropdown */
+  max-height: 200px; /* Maximum height for results list */
+  overflow-y: auto; /* Scrollable if content overflows */
+  z-index: 10; /* Ensure results dropdown is above other content */
+}
+
+#results-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#results-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* Divider between results */
+}
+
+#results-list li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+#results-list img.thumbnail {
+  width: 70px; /* Thumbnail width */
+  /*height: 30px; /* Thumbnail height */
+  aspect-ratio: 16/9;
+  object-fit: cover; /* Ensure image covers the area */
+  margin-right: 10px; /* Space between image and text */
+}
+
+#results-list li:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
 }

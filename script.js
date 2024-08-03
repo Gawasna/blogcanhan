@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  let savedTheme = getCookie('theme');
-  if (savedTheme === 'dark') {
-      toggleTheme(); // Apply dark theme if it was saved
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
@@ -25,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
+});
 
-  const searchField = document.getElementById("searchfield");
+/*  const searchField = document.getElementById("searchfield");
   const searchForm = document.querySelector(".search-form");
   const searchIcon = document.querySelector(".search-icon");
   const clearIcon = document.querySelector(".clear-icon");
@@ -55,70 +49,30 @@ document.addEventListener("DOMContentLoaded", function () {
       clearIcon.style.display = "none";
     }
   });
+  */
 
-  // Function to set a cookie with a given name, value, and expiration time
-  function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/WD-blogcanhan; domain=127.0.0.1";
-}
+//theme mode
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("toggleButton");
+  const currentMode = localStorage.getItem("mode");
 
-// Function to get the value of a cookie by its name
-function getCookie(name) {
-  let nameEQ = name + "=";
-  let cookies = document.cookie.split(';');
-  for(let i = 0; i < cookies.length; i++) {
-      let cookie = cookies[i];
-      while (cookie.charAt(0) === ' ') {
-          cookie = cookie.substring(1, cookie.length);
-      }
-      if (cookie.indexOf(nameEQ) === 0) {
-          return cookie.substring(nameEQ.length, cookie.length);
-      }
-  }
-  return null;
-}
-
-// Function to delete a cookie by its name
-function deleteCookie(name) {
-  document.cookie = name + "=; Max-Age=-99999999;";
-}
-
-// Toggle theme function with cookie integration
-function toggleTheme() {
-  let theme;
-  if (getCookie('theme') === 'dark') {
-      theme = 'light';
-      document.body.classList.remove('dark-mode');
-      document.getElementById('light-mode').style.display = 'none';
-      document.getElementById('dark-mode').style.display = 'block';
-      document.querySelector('.header-container').style.background = '';
+  if (currentMode) {
+      document.body.classList.add(currentMode);
   } else {
-      theme = 'dark';
-      document.body.classList.add('dark-mode');
-      document.getElementById('light-mode').style.display = 'block';
-      document.getElementById('dark-mode').style.display = 'none';
-      document.querySelector('.header-container').style.background = '';
+      document.body.classList.add("light-mode");
   }
-  setCookie('theme', theme, 30); // Save theme to cookie for 30 days
-}
 
-// Check if there's a saved theme and apply it on page load
-document.addEventListener('DOMContentLoaded', function() {
-  let savedTheme = getCookie('theme');
-  if (savedTheme === 'dark') {
-      toggleTheme(); // Apply dark theme if it was saved
-  }
+  toggleButton.addEventListener("click", () => {
+      if (document.body.classList.contains("light-mode")) {
+          document.body.classList.replace("light-mode", "dark-mode");
+          localStorage.setItem("mode", "dark-mode");
+      } else {
+          document.body.classList.replace("dark-mode", "light-mode");
+          localStorage.setItem("mode", "light-mode");
+      }
+  });
 });
-
-// Event listeners remain the same
-document.getElementById('light-mode').addEventListener('click', toggleTheme);
-document.getElementById('dark-mode').addEventListener('click', toggleTheme);
-});
+//end
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -157,3 +111,67 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
   }
 }
+
+//searching function
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchfield');
+  const searchResults = document.getElementById('search-results');
+  const resultsList = document.getElementById('results-list');
+
+  let data = [];
+
+  // Fetch data from JSON file
+  fetch('data.json')
+      .then(response => response.json())
+      .then(jsonData => {
+          data = jsonData;
+      })
+      .catch(error => console.error('Error fetching data:', error));
+
+  // Event listener for search input
+  searchInput.addEventListener('input', function() {
+      const query = searchInput.value.trim().toLowerCase();
+      resultsList.innerHTML = '';
+
+      if (query.length < 2) {
+          searchResults.style.display = 'none';
+          return;
+      }
+
+      const filteredData = data.filter(item => item.title.toLowerCase().includes(query));
+      
+      if (filteredData.length === 0) {
+          resultsList.innerHTML = '<li>Không tìm thấy kết quả</li>';
+      } else {
+          filteredData.slice(0, 5).forEach(item => {
+              const li = document.createElement('li');
+              const img = document.createElement('img');
+              img.src = item.thumbnail;
+              img.alt = item.title;
+              img.className = 'thumbnail'; // Apply thumbnail class for styling
+
+              const text = document.createElement('span');
+              text.textContent = item.title;
+
+              li.appendChild(img);
+              li.appendChild(text);
+              li.dataset.url = item.content_file;  // Store the URL in a data attribute
+
+              li.addEventListener('click', function() {
+                  window.location.href = li.dataset.url;  // Redirect to the URL
+              });
+
+              resultsList.appendChild(li);
+          });
+      }
+
+      searchResults.style.display = 'block';
+  });
+
+  // Hide results when clicking outside
+  document.addEventListener('click', function(event) {
+      if (!searchInput.contains(event.target) && !resultsList.contains(event.target)) {
+          searchResults.style.display = 'none';
+      }
+  });
+});

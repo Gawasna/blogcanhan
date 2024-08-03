@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="https://images-ng.pixai.art/images/stillThumb/c727dbb4-2d71-4623-98fa-ff522f8f0dcd">
     <title>Gawasna's Blog</title>
-    <link rel="icon" type="image/png" sizes="48x48" href="./soft1.jpg">
+    <link rel="icon" type="image/png" sizes="48x48" href="/pixi.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
     <input class="navIn hidden" id="offNav" type="checkbox">
     <header class="header" id="header">
@@ -34,6 +33,9 @@
                         <form class="search-form" action="./error/404NotFound.html">
                             <input type="text" name="search" id="searchfield" placeholder="Search something..."
                                 autocomplete="off">
+                            <span id="search-results">
+                                    <ul id="results-list"></ul>
+                            </span>
                             <span class="search-icon">
                                 <img id="searchbtn" width="20" height="20"
                                     src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1" />
